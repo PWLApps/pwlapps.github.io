@@ -64,22 +64,60 @@
       code{background:#f3f4f6}
       header{background:linear-gradient(180deg, rgba(124,58,237,.10), rgba(255,255,255,0))}
     }
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 6px 16px;
+      cursor: pointer;
+      z-index: 100;
+      user-select: none;
+    }
+    .lang-toggle .flag {
+      font-size: 1.2rem;
+      opacity: 0.4;
+      transition: opacity 0.2s;
+      line-height: 1;
+    }
+    .lang-toggle .flag.active {
+      opacity: 1;
+    }
+    .lang-toggle .switch {
+      width: 36px;
+      height: 20px;
+      background: var(--border);
+      border-radius: 10px;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .lang-toggle .switch::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s;
+    }
+    .lang-toggle.en .switch::after {
+      transform: translateX(16px);
+    }
+    .content-en { display: none; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <a href="/" class="back-link">&larr; PWL Apps</a>
-      <h1>Política de Privacidade - Mystic App <span class="badge">v1.0</span></h1>
-      <p class="meta"><strong>Última atualização:</strong> 17 de janeiro de 2026</p>
-      <p class="meta">
-        <strong>Desenvolvedor:</strong> PWL Apps<br/>
-        <strong>Email de contato:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a><br/>
-        <strong>Aplicativo:</strong> Mystic - Leitura de Tarô com IA
-      </p>
-    </div>
-  </header>
+  <div id="privacy-toggle"></div>
+  <div id="privacy-header"></div>
 
+  <div class="content-pt">
   <main class="wrap">
 
     <section class="card" id="introduction">
@@ -449,12 +487,377 @@
     </section>
 
   </main>
+  </div>
+
+  <div class="content-en">
+  <main class="wrap">
+
+    <section class="card" id="introduction-en">
+      <h2>1. Introduction</h2>
+      <p>
+        This Privacy Policy describes how Mystic App ("we", "our" or "application") collects, uses, stores and protects your personal information when you use our tarot reading application.
+      </p>
+      <p>
+        By using Mystic App, you agree to the collection and use of information in accordance with this policy. We recommend that you read this policy carefully before using the application.
+      </p>
+      <p>
+        <strong>Minimum age:</strong> This application is intended for users aged 13 or older. We do not intentionally collect information from children under 13.
+      </p>
+    </section>
+
+    <section class="card" id="information-we-collect-en">
+      <h2>2. Information We Collect</h2>
+
+      <h3>2.1 Voluntarily Provided Information</h3>
+      <p>When you use Mystic App, you may provide the following information:</p>
+      <ul>
+        <li><strong>Username:</strong> Name you choose to provide when doing a reading (optional)</li>
+        <li><strong>Questions:</strong> Text you write when requesting a tarot reading</li>
+        <li><strong>Saved readings:</strong> History of readings you chose to save locally</li>
+      </ul>
+
+      <h3>2.2 Automatically Collected Information</h3>
+      <ul>
+        <li><strong>Unique user identifier (UUID):</strong> A unique code automatically generated on first app use, stored locally on your device. This UUID is not linked to your personal identity.</li>
+        <li><strong>App usage data:</strong> Information about how you interact with the app (selected cards, number of readings performed)</li>
+        <li><strong>Technical data:</strong> Information about your device, operating system version, app version</li>
+      </ul>
+
+      <h3>2.3 Third-Party Information</h3>
+
+      <h4>Google AdMob (Rewarded Ads)</h4>
+      <ul>
+        <li>Device advertising ID (IDFA/AAID)</li>
+        <li>IP address</li>
+        <li>Ad interaction data</li>
+        <li>Device and browser information</li>
+        <li>Approximate geolocation data</li>
+      </ul>
+
+      <h4>Supabase (Backend and Storage)</h4>
+      <ul>
+        <li>IP address (server logs)</li>
+        <li>HTTP request data</li>
+        <li>Reward validation information</li>
+      </ul>
+    </section>
+
+    <section class="card" id="how-we-use-en">
+      <h2>3. How We Use Your Information</h2>
+
+      <h3>3.1 Main Purposes</h3>
+      <ul>
+        <li><strong>Generate personalized tarot readings:</strong> Your name and question are sent to OpenAI to generate personalized interpretations</li>
+        <li><strong>Validate ad rewards:</strong> UUID and reading data are used to verify that you watched an ad before generating a reading</li>
+        <li><strong>Store readings:</strong> Your readings are saved locally on the device and temporarily on our server during the validation process</li>
+        <li><strong>Display relevant ads:</strong> Google AdMob uses data to personalize ads shown to you</li>
+        <li><strong>Improve the application:</strong> We analyze aggregated and anonymous data to improve user experience</li>
+      </ul>
+
+      <h3>3.2 Legal Basis (LGPD/GDPR)</h3>
+      <ul>
+        <li><strong>Consent:</strong> By using the application and accepting this policy, you consent to the processing of your data</li>
+        <li><strong>Contract execution:</strong> Processing your data is necessary to provide the requested service (tarot readings)</li>
+        <li><strong>Legitimate interests:</strong> Preventing fraud and improving our services</li>
+      </ul>
+    </section>
+
+    <section class="card" id="sharing-en">
+      <h2>4. Information Sharing</h2>
+
+      <h3>4.1 Third-Party Services</h3>
+
+      <h4>OpenAI (AI Reading Generation)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> Username, question, selected cards</li>
+        <li><strong>Purpose:</strong> Generate personalized tarot interpretations using artificial intelligence</li>
+        <li><strong>Retention:</strong> OpenAI retains data according to its own privacy policy</li>
+        <li><strong>Policy:</strong> <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">https://openai.com/policies/privacy-policy</a></li>
+      </ul>
+
+      <h4>Supabase (Backend and Database)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> UUID, username, question, reading ID, reward validation data</li>
+        <li><strong>Purpose:</strong> Validate that ads were watched before processing readings</li>
+        <li><strong>Data location:</strong> Servers in the United States (West US - Oregon)</li>
+        <li><strong>Retention:</strong> Validation data is kept for 5 minutes and then automatically expires</li>
+        <li><strong>Policy:</strong> <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">https://supabase.com/privacy</a></li>
+      </ul>
+
+      <h4>Google AdMob (Rewarded Ads)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> Advertising ID, device information, interaction data</li>
+        <li><strong>Purpose:</strong> Display rewarded ads and validate views</li>
+        <li><strong>Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+        <li><strong>Ad personalization:</strong> You can disable personalized ads in your device settings</li>
+      </ul>
+
+      <h3>4.2 International Data Transfer</h3>
+      <p>Your data may be transferred and processed on servers located outside Brazil, including:</p>
+      <ul>
+        <li>United States (Supabase, OpenAI, Google)</li>
+      </ul>
+      <p>
+        We ensure these transfers are carried out with adequate safeguards, including standard contractual clauses and GDPR compliance.
+      </p>
+
+      <h3>4.3 Legal Situations</h3>
+      <p>We may disclose your information if:</p>
+      <ul>
+        <li>Required by law or legal process</li>
+        <li>To protect our rights, property or safety</li>
+        <li>To prevent fraud or illegal activities</li>
+      </ul>
+    </section>
+
+    <section class="card" id="storage-security-en">
+      <h2>5. Data Storage and Security</h2>
+
+      <h3>5.1 Local Storage</h3>
+      <ul>
+        <li><strong>Saved readings:</strong> Stored locally on your device using <code>SharedPreferences</code> (encrypted by the operating system)</li>
+        <li><strong>UUID:</strong> Stored locally on your device</li>
+        <li><strong>Control:</strong> You can delete saved readings at any time within the app or by uninstalling the application</li>
+      </ul>
+
+      <h3>5.2 Server Storage</h3>
+      <ul>
+        <li><strong>Validation data:</strong> Temporarily stored on Supabase for up to 5 minutes to validate rewards</li>
+        <li><strong>Security:</strong> Data transmitted via HTTPS/TLS, database with Row Level Security (RLS)</li>
+      </ul>
+
+      <h3>5.3 Data Retention</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Retention Period</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Saved readings</td>
+            <td>Until you delete or uninstall the app</td>
+            <td>Local device</td>
+          </tr>
+          <tr>
+            <td>Reward validation data</td>
+            <td>5 minutes</td>
+            <td>Supabase server</td>
+          </tr>
+          <tr>
+            <td>Server logs</td>
+            <td>30 days</td>
+            <td>Supabase server</td>
+          </tr>
+          <tr>
+            <td>OpenAI data</td>
+            <td>According to OpenAI's policy</td>
+            <td>OpenAI servers</td>
+          </tr>
+          <tr>
+            <td>AdMob data</td>
+            <td>According to Google's policy</td>
+            <td>Google servers</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="your-rights-en">
+      <h2>6. Your Rights (LGPD and GDPR)</h2>
+
+      <h3>6.1 Guaranteed Rights</h3>
+      <ul>
+        <li><strong>Access:</strong> Request copies of your personal data</li>
+        <li><strong>Rectification:</strong> Correct inaccurate or incomplete data</li>
+        <li><strong>Deletion:</strong> Request deletion of your data ("right to be forgotten")</li>
+        <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li>
+        <li><strong>Opposition:</strong> Object to the processing of your data</li>
+        <li><strong>Consent revocation:</strong> Withdraw your consent at any time</li>
+        <li><strong>Processing confirmation:</strong> Confirm whether your data is being processed</li>
+        <li><strong>Anonymization/blocking:</strong> Request anonymization or blocking of data</li>
+      </ul>
+
+      <h3>6.2 How to Exercise Your Rights</h3>
+      <p>
+        To exercise any of these rights, send an email to:
+        <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong>
+      </p>
+      <p>We will respond to your request within <strong>15 business days</strong> (as per LGPD).</p>
+
+      <h3>6.3 Disable Personalized Ads</h3>
+      <p><strong>Android:</strong></p>
+      <ol>
+        <li>Settings &gt; Google &gt; Ads</li>
+        <li>Enable "Opt out of ads personalization"</li>
+      </ol>
+      <p><strong>iOS:</strong></p>
+      <ol>
+        <li>Settings &gt; Privacy &gt; Advertising</li>
+        <li>Enable "Limit Ad Tracking"</li>
+      </ol>
+    </section>
+
+    <section class="card" id="cookies-tracking-en">
+      <h2>7. Cookies and Tracking Technologies</h2>
+
+      <h3>7.1 Third-Party Cookies</h3>
+      <p>Google AdMob may use cookies and similar technologies (web beacons, pixels) to:</p>
+      <ul>
+        <li>Display relevant ads</li>
+        <li>Measure ad effectiveness</li>
+        <li>Detect fraud</li>
+      </ul>
+      <p>You can manage cookies in your browser or device settings.</p>
+
+      <h3>7.2 Device Identifiers</h3>
+      <ul>
+        <li><strong>Android:</strong> Google Advertising ID (GAID)</li>
+        <li><strong>iOS:</strong> Identifier for Advertisers (IDFA)</li>
+      </ul>
+      <p>These identifiers can be reset in your device's privacy settings.</p>
+    </section>
+
+    <section class="card" id="analytics-monitoring-en">
+      <h2>8. Analytics and Monitoring (Future)</h2>
+      <p>
+        Currently, we only use the Supabase administrative dashboard to monitor the technical operation of the application (server logs, errors).
+      </p>
+      <p><strong>In the future, we may add:</strong></p>
+      <ul>
+        <li>Firebase Analytics or similar to understand how users use the app</li>
+        <li>Performance monitoring tools</li>
+      </ul>
+      <p>
+        If we add analytics services, we will update this policy and notify users.
+      </p>
+    </section>
+
+    <section class="card" id="external-links-en">
+      <h2>9. External Links</h2>
+      <p>
+        The application may contain links to third-party websites or services (such as Google/OpenAI privacy policies). We are not responsible for the privacy practices of these sites. We recommend that you read the privacy policies of any site you visit.
+      </p>
+    </section>
+
+    <section class="card" id="changes-en">
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy periodically. We will notify you of significant changes by:</p>
+      <ul>
+        <li>Publishing the new policy within the application</li>
+        <li>Sending a notification in the app</li>
+        <li>Updating the "Last updated" date at the top of this document</li>
+      </ul>
+      <p>Continued use of the application after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section class="card" id="security-en">
+      <h2>11. Data Security</h2>
+
+      <h3>11.1 Technical Measures</h3>
+      <ul>
+        <li><strong>Encryption in transit:</strong> HTTPS/TLS for all communications</li>
+        <li><strong>Encryption at rest:</strong> Device data protected by the operating system</li>
+        <li><strong>Server authentication:</strong> SSL certificate validation</li>
+        <li><strong>Server-Side Verification:</strong> Double reward validation (Google + Supabase)</li>
+      </ul>
+
+      <h3>11.2 Organizational Measures</h3>
+      <ul>
+        <li>Limited data access only to authorized personnel</li>
+        <li>Security log monitoring</li>
+        <li>Regular security reviews</li>
+      </ul>
+
+      <h3>11.3 Limitations</h3>
+      <p>
+        No method of transmission over the Internet or electronic storage is 100% secure. Although we strive to protect your data, we cannot guarantee absolute security.
+      </p>
+    </section>
+
+    <section class="card" id="children-en">
+      <h2>12. Minor's Data</h2>
+      <p><strong>This application is not directed at children under 13 years of age.</strong></p>
+      <p>
+        We do not intentionally collect personal information from children under 13. If you are a parent or guardian and believe your child has provided personal data, please contact us at
+        <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong> so we can take appropriate action.
+      </p>
+      <p><strong>Users between 13-18 years:</strong> We recommend that minors under 18 obtain permission from parents or guardians before using the application.</p>
+    </section>
+
+    <section class="card" id="jurisdiction-en">
+      <h2>13. Jurisdiction and Applicable Law</h2>
+
+      <h3>13.1 Users in Brazil</h3>
+      <p>This policy is governed by the General Data Protection Law (LGPD - Law 13,709/2018).</p>
+
+      <h3>13.2 Users in the European Union</h3>
+      <p>For EU users, this policy also complies with the General Data Protection Regulation (GDPR).</p>
+
+      <h3>13.3 Complaints</h3>
+      <p>You have the right to file a complaint with:</p>
+      <ul>
+        <li><strong>Brazil:</strong> National Data Protection Authority (ANPD) - <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">https://www.gov.br/anpd</a></li>
+        <li><strong>EU:</strong> Data protection authority of your country</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact-en">
+      <h2>14. Contact</h2>
+      <p>If you have questions, concerns or requests related to this Privacy Policy or the processing of your personal data, please contact:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a><br/>
+        <strong>Developer:</strong> PWL Apps<br/>
+        <strong>Application:</strong> Mystic - AI Tarot Reading
+      </p>
+      <p>We will respond to your requests within 15 business days.</p>
+    </section>
+
+    <section class="card" id="tldr-en">
+      <h2>15. Quick Summary (TL;DR)</h2>
+
+      <p><strong>What we collect:</strong></p>
+      <ul>
+        <li>Name (optional), questions, saved readings</li>
+        <li>Unique UUID (non-identifiable)</li>
+        <li>AdMob data (advertising ID, IP)</li>
+      </ul>
+
+      <p><strong>How we use it:</strong></p>
+      <ul>
+        <li>Generate tarot readings with AI (OpenAI)</li>
+        <li>Validate that you watched ads</li>
+        <li>Display relevant ads</li>
+        <li>Improve the application</li>
+      </ul>
+
+      <p><strong>Sharing:</strong></p>
+      <ul>
+        <li>OpenAI (to generate readings)</li>
+        <li>Supabase (temporary validation - 5 min)</li>
+        <li>Google AdMob (ads)</li>
+      </ul>
+
+      <p><strong>Your rights:</strong></p>
+      <ul>
+        <li>Access, correct or delete your data</li>
+        <li>Revoke consent at any time</li>
+        <li>Request data portability</li>
+      </ul>
+
+      <p><strong>Contact:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></p>
+    </section>
+
+  </main>
+  </div>
 
   <footer>
-    <div class="wrap">
-      <p>Versão 1.0 &middot; Data de vigência: 17 de janeiro de 2026</p>
-      <p>&copy; 2026 PWL Apps. Todos os direitos reservados.</p>
-    </div>
+    <div class="wrap" id="privacy-footer"></div>
   </footer>
+
+  <script src="../../shared.js"></script>
+  <script>initPrivacyPage('mystic-app');</script>
 </body>
 </html>
