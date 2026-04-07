@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de Privacidade - Finança Pro</title>
+  <meta name="description" content="Política de Privacidade do Finança Pro - Calculadoras Financeiras (PWL Apps)." />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
+      --border:#1f2937; --accent:#a78bfa; --link:#93c5fd;
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    header{
+      padding:40px 16px 12px; border-bottom:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(167,139,250,.12), rgba(0,0,0,0));
+    }
+    .wrap{max-width:960px; margin:0 auto; padding:0 16px}
+    h1{margin:0 0 8px; font-size:28px}
+    .meta{color:var(--muted); margin:0}
+    main{padding:24px 0 56px}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:20px; margin:16px 0;
+    }
+    h2{margin:0 0 10px; font-size:20px}
+    h3{margin:18px 0 8px; font-size:16px; color:var(--text)}
+    h4{margin:14px 0 6px; font-size:14px; color:var(--text)}
+    p, li{color:var(--text)}
+    ul, ol{padding-left:20px; margin:8px 0}
+    li{margin:4px 0}
+    a{color:var(--link)}
+    code{background:rgba(255,255,255,.06); padding:.15em .35em; border-radius:6px}
+    hr{border:none; border-top:1px solid var(--border); margin:18px 0}
+    table{
+      width:100%; border-collapse:collapse; margin-top:10px; overflow:hidden; border-radius:12px;
+      border:1px solid var(--border);
+    }
+    th, td{padding:12px 10px; border-bottom:1px solid var(--border); vertical-align:top; text-align:left}
+    th{background:rgba(255,255,255,.04)}
+    tr:last-child td{border-bottom:none}
+    .badge{
+      display:inline-block; padding:2px 10px; border:1px solid rgba(167,139,250,.35);
+      border-radius:999px; color:#ddd6fe; font-size:12px; margin-left:8px;
+    }
+    .back-link{
+      display:inline-block; margin-bottom:16px; color:var(--accent); text-decoration:none;
+      font-size:14px;
+    }
+    .back-link:hover{text-decoration:underline}
+    footer{
+      border-top:1px solid var(--border); padding:20px 0; color:var(--muted); text-align:center;
+      font-size:0.85rem;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7f7fb; --card:#ffffff; --text:#111827; --muted:#4b5563;
+        --border:#e5e7eb; --accent:#7c3aed; --link:#2563eb;
+      }
+      code{background:#f3f4f6}
+      header{background:linear-gradient(180deg, rgba(124,58,237,.10), rgba(255,255,255,0))}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a href="/" class="back-link">&larr; PWL Apps</a>
+      <h1>Política de Privacidade - Finança Pro <span class="badge">v1.0</span></h1>
+      <p class="meta"><strong>Última atualização:</strong> 7 de abril de 2026</p>
+      <p class="meta">
+        <strong>Desenvolvedor:</strong> PWL Apps<br/>
+        <strong>Email de contato:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a><br/>
+        <strong>Aplicativo:</strong> Finança Pro - Calculadoras Financeiras
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="card" id="introduction">
+      <h2>1. Introdução</h2>
+      <p>
+        Esta Política de Privacidade descreve como o Finança Pro ("nós", "nosso" ou "aplicativo") coleta, usa, armazena
+        e protege suas informações quando você utiliza nosso aplicativo de calculadoras financeiras.
+      </p>
+      <p>
+        O Finança Pro é uma ferramenta de cálculos financeiros que inclui simuladores de juros compostos, renda fixa,
+        equivalência de investimentos, independência financeira e cotações de moedas. O app não requer cadastro ou login.
+      </p>
+      <p>
+        Ao usar o Finança Pro, você concorda com a coleta e uso de informações de acordo com esta política.
+      </p>
+      <p>
+        <strong>Idade mínima:</strong> Este aplicativo é destinado a usuários com 13 anos ou mais.
+        Não coletamos intencionalmente informações de crianças menores de 13 anos.
+      </p>
+    </section>
+
+    <section class="card" id="information-we-collect">
+      <h2>2. Informações que Coletamos</h2>
+
+      <h3>2.1 Informações Armazenadas Localmente</h3>
+      <p>O Finança Pro armazena dados localmente no seu dispositivo para melhorar a experiência de uso:</p>
+      <ul>
+        <li><strong>Cache de cotações e taxas:</strong> Taxas de mercado (SELIC, CDI, IPCA), cotações de moedas e criptomoedas são cacheadas localmente via <code>SharedPreferences</code> com validade de 24 horas</li>
+        <li><strong>Dados técnicos:</strong> Informações básicas do dispositivo necessárias para exibição de anúncios</li>
+      </ul>
+      <p><strong>O Finança Pro não coleta:</strong></p>
+      <ul>
+        <li>Nome, email ou qualquer dado de identificação pessoal</li>
+        <li>Valores inseridos nas calculadoras</li>
+        <li>Resultados de simulações</li>
+        <li>Nenhum dado financeiro real do usuário</li>
+      </ul>
+
+      <h3>2.2 Informações de Terceiros</h3>
+
+      <h4>Google AdMob (Anúncios em Banner)</h4>
+      <ul>
+        <li>ID de publicidade do dispositivo (IDFA/AAID)</li>
+        <li>Endereço IP</li>
+        <li>Dados de interação com anúncios</li>
+        <li>Informações do dispositivo e navegador</li>
+        <li>Dados de geolocalização aproximada</li>
+      </ul>
+
+      <h4>APIs de Dados de Mercado</h4>
+      <p>O app consulta APIs públicas para obter taxas e cotações atualizadas. Essas requisições podem registrar:</p>
+      <ul>
+        <li>Endereço IP do dispositivo</li>
+        <li>Dados técnicos da requisição HTTP (user-agent, timestamps)</li>
+      </ul>
+      <p>As APIs consultadas são:</p>
+      <ul>
+        <li><strong>Banco Central do Brasil (BCB SGS):</strong> Taxas SELIC, CDI e IPCA</li>
+        <li><strong>AwesomeAPI:</strong> Cotações de moedas estrangeiras</li>
+        <li><strong>CoinGecko:</strong> Cotações de criptomoedas</li>
+      </ul>
+    </section>
+
+    <section class="card" id="how-we-use">
+      <h2>3. Como Usamos as Informações</h2>
+
+      <h3>3.1 Finalidades Principais</h3>
+      <ul>
+        <li><strong>Exibir taxas de mercado atualizadas:</strong> Dados do BCB, AwesomeAPI e CoinGecko são usados para mostrar cotações e taxas em tempo real</li>
+        <li><strong>Cache local:</strong> Taxas e cotações são cacheadas por 24h para reduzir requisições e melhorar a performance</li>
+        <li><strong>Exibir anúncios:</strong> O Google AdMob exibe banners publicitários para monetização do app</li>
+      </ul>
+
+      <h3>3.2 Base Legal (LGPD/GDPR)</h3>
+      <ul>
+        <li><strong>Consentimento:</strong> Ao usar o aplicativo e aceitar esta política, você consente com o processamento de dados</li>
+        <li><strong>Interesses legítimos:</strong> Exibição de anúncios para manutenção do serviço gratuito</li>
+      </ul>
+    </section>
+
+    <section class="card" id="sharing">
+      <h2>4. Compartilhamento de Informações</h2>
+
+      <h3>4.1 Serviços de Terceiros</h3>
+
+      <h4>Google AdMob (Anúncios em Banner)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> ID de publicidade, informações do dispositivo, dados de interação com anúncios</li>
+        <li><strong>Finalidade:</strong> Exibir anúncios em banner e medir sua eficácia</li>
+        <li><strong>Política:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+        <li><strong>Personalização de anúncios:</strong> Você pode desativar anúncios personalizados nas configurações do seu dispositivo</li>
+      </ul>
+
+      <h4>Banco Central do Brasil (BCB SGS)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> Endereço IP (via requisição HTTP)</li>
+        <li><strong>Finalidade:</strong> Obter taxas SELIC, CDI e IPCA atualizadas</li>
+        <li><strong>Política:</strong> <a href="https://www.bcb.gov.br/acessoinformacao/lgpd" target="_blank" rel="noopener noreferrer">https://www.bcb.gov.br/acessoinformacao/lgpd</a></li>
+      </ul>
+
+      <h4>AwesomeAPI</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> Endereço IP (via requisição HTTP)</li>
+        <li><strong>Finalidade:</strong> Obter cotações de moedas estrangeiras (USD, EUR, etc.)</li>
+        <li><strong>Política:</strong> <a href="https://docs.awesomeapi.com.br" target="_blank" rel="noopener noreferrer">https://docs.awesomeapi.com.br</a></li>
+      </ul>
+
+      <h4>CoinGecko</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> Endereço IP (via requisição HTTP)</li>
+        <li><strong>Finalidade:</strong> Obter cotações de criptomoedas (Bitcoin, Ethereum, etc.)</li>
+        <li><strong>Política:</strong> <a href="https://www.coingecko.com/en/privacy" target="_blank" rel="noopener noreferrer">https://www.coingecko.com/en/privacy</a></li>
+      </ul>
+
+      <h3>4.2 Transferência Internacional de Dados</h3>
+      <p>Seus dados podem ser processados em servidores fora do Brasil:</p>
+      <ul>
+        <li>Estados Unidos (Google AdMob)</li>
+        <li>Diversos países (CoinGecko, AwesomeAPI)</li>
+      </ul>
+
+      <h3>4.3 Situações Legais</h3>
+      <p>Podemos divulgar informações se:</p>
+      <ul>
+        <li>Exigido por lei ou processo legal</li>
+        <li>Para proteger nossos direitos, propriedade ou segurança</li>
+        <li>Para prevenir fraudes ou atividades ilegais</li>
+      </ul>
+    </section>
+
+    <section class="card" id="storage-security">
+      <h2>5. Armazenamento e Segurança de Dados</h2>
+
+      <h3>5.1 Armazenamento Local</h3>
+      <ul>
+        <li><strong>Cache de taxas/cotações:</strong> Armazenado via <code>SharedPreferences</code>, protegido pelo sistema operacional do dispositivo</li>
+        <li><strong>Validade:</strong> O cache expira automaticamente após 24 horas</li>
+        <li><strong>Controle:</strong> Você pode limpar o cache a qualquer momento limpando os dados do app ou desinstalando</li>
+      </ul>
+
+      <h3>5.2 Sem Armazenamento em Servidor</h3>
+      <p>
+        O Finança Pro <strong>não possui servidor próprio</strong>. Não armazenamos nenhum dado do usuário em servidores remotos.
+        Todos os dados são processados localmente no dispositivo.
+      </p>
+
+      <h3>5.3 Retenção de Dados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de Dado</th>
+            <th>Período de Retenção</th>
+            <th>Localização</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cache de taxas e cotações</td>
+            <td>24 horas (renovável)</td>
+            <td>Dispositivo local</td>
+          </tr>
+          <tr>
+            <td>Dados do AdMob</td>
+            <td>Conforme política do Google</td>
+            <td>Servidores Google</td>
+          </tr>
+          <tr>
+            <td>Logs de APIs de mercado</td>
+            <td>Conforme política de cada provedor</td>
+            <td>Servidores dos provedores</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="your-rights">
+      <h2>6. Seus Direitos (LGPD e GDPR)</h2>
+
+      <h3>6.1 Direitos Garantidos</h3>
+      <ul>
+        <li><strong>Acesso:</strong> Solicitar informações sobre quais dados são processados</li>
+        <li><strong>Exclusão:</strong> Limpar dados locais desinstalando o app ou limpando seus dados</li>
+        <li><strong>Oposição:</strong> Opor-se ao processamento de dados para anúncios personalizados</li>
+        <li><strong>Revogação de consentimento:</strong> Retirar seu consentimento a qualquer momento</li>
+      </ul>
+
+      <h3>6.2 Como Exercer Seus Direitos</h3>
+      <p>
+        Para exercer qualquer um desses direitos, envie um email para:
+        <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong>
+      </p>
+      <p>Responderemos sua solicitação em até <strong>15 dias úteis</strong> (conforme LGPD).</p>
+
+      <h3>6.3 Desativar Anúncios Personalizados</h3>
+      <p><strong>Android:</strong></p>
+      <ol>
+        <li>Configurações &gt; Google &gt; Anúncios</li>
+        <li>Ative "Desativar personalização de anúncios"</li>
+      </ol>
+      <p><strong>iOS:</strong></p>
+      <ol>
+        <li>Configurações &gt; Privacidade &gt; Publicidade</li>
+        <li>Ative "Limitar rastreamento de anúncios"</li>
+      </ol>
+    </section>
+
+    <section class="card" id="cookies-tracking">
+      <h2>7. Cookies e Tecnologias de Rastreamento</h2>
+
+      <h3>7.1 Cookies de Terceiros</h3>
+      <p>O Google AdMob pode usar cookies e tecnologias similares para:</p>
+      <ul>
+        <li>Exibir anúncios relevantes</li>
+        <li>Medir eficácia de anúncios</li>
+        <li>Detectar fraudes</li>
+      </ul>
+      <p>Você pode gerenciar cookies nas configurações do seu dispositivo.</p>
+
+      <h3>7.2 Identificadores de Dispositivo</h3>
+      <ul>
+        <li><strong>Android:</strong> Google Advertising ID (GAID)</li>
+        <li><strong>iOS:</strong> Identifier for Advertisers (IDFA)</li>
+      </ul>
+      <p>Esses identificadores podem ser redefinidos nas configurações de privacidade do seu dispositivo.</p>
+    </section>
+
+    <section class="card" id="no-account">
+      <h2>8. Sem Cadastro ou Conta</h2>
+      <p>
+        O Finança Pro <strong>não requer e não oferece</strong> cadastro, login ou criação de conta.
+        Não coletamos email, nome, telefone ou qualquer informação de identificação pessoal.
+      </p>
+      <p>
+        Todas as simulações e cálculos são processados localmente no seu dispositivo e não são enviados
+        para nenhum servidor.
+      </p>
+    </section>
+
+    <section class="card" id="external-links">
+      <h2>9. Links Externos</h2>
+      <p>
+        O aplicativo pode conter links para sites de terceiros. Não somos responsáveis pelas práticas
+        de privacidade desses sites. Recomendamos que você leia as políticas de privacidade de qualquer
+        site que visitar.
+      </p>
+    </section>
+
+    <section class="card" id="changes">
+      <h2>10. Alterações nesta Política</h2>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre mudanças significativas:</p>
+      <ul>
+        <li>Publicando a nova política dentro do aplicativo</li>
+        <li>Atualizando a data "Última atualização" no topo deste documento</li>
+      </ul>
+      <p>O uso continuado do aplicativo após alterações constitui aceitação da política atualizada.</p>
+    </section>
+
+    <section class="card" id="security">
+      <h2>11. Segurança de Dados</h2>
+
+      <h3>11.1 Medidas Técnicas</h3>
+      <ul>
+        <li><strong>Criptografia em trânsito:</strong> HTTPS/TLS para todas as comunicações com APIs</li>
+        <li><strong>Processamento local:</strong> Todos os cálculos financeiros são feitos no dispositivo</li>
+        <li><strong>Sem servidor próprio:</strong> Não há banco de dados remoto com dados de usuários</li>
+      </ul>
+
+      <h3>11.2 Limitações</h3>
+      <p>
+        Nenhum método de transmissão pela Internet é 100% seguro.
+        Embora nos esforcemos para proteger seus dados, não podemos garantir segurança absoluta.
+      </p>
+    </section>
+
+    <section class="card" id="children">
+      <h2>12. Dados de Menores de Idade</h2>
+      <p><strong>Este aplicativo não é direcionado a crianças menores de 13 anos.</strong></p>
+      <p>
+        Não coletamos intencionalmente informações pessoais de menores de 13 anos. Se você é pai/mãe ou responsável
+        e tem preocupações, entre em contato em
+        <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong>.
+      </p>
+    </section>
+
+    <section class="card" id="jurisdiction">
+      <h2>13. Jurisdição e Lei Aplicável</h2>
+
+      <h3>13.1 Usuários no Brasil</h3>
+      <p>Esta política é regida pela Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018).</p>
+
+      <h3>13.2 Usuários na União Europeia</h3>
+      <p>Para usuários na UE, esta política também está em conformidade com o GDPR.</p>
+
+      <h3>13.3 Reclamações</h3>
+      <p>Você tem o direito de registrar uma reclamação junto à:</p>
+      <ul>
+        <li><strong>Brasil:</strong> Autoridade Nacional de Proteção de Dados (ANPD) - <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">https://www.gov.br/anpd</a></li>
+        <li><strong>UE:</strong> Autoridade de proteção de dados do seu país</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>14. Contato</h2>
+      <p>Se você tiver dúvidas ou solicitações relacionadas a esta Política de Privacidade, entre em contato:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a><br/>
+        <strong>Desenvolvedor:</strong> PWL Apps<br/>
+        <strong>Aplicativo:</strong> Finança Pro - Calculadoras Financeiras
+      </p>
+      <p>Responderemos suas solicitações em até 15 dias úteis.</p>
+    </section>
+
+    <section class="card" id="tldr">
+      <h2>15. Resumo Rápido (TL;DR)</h2>
+
+      <p><strong>O que coletamos:</strong></p>
+      <ul>
+        <li>Nenhum dado pessoal (sem cadastro, sem login)</li>
+        <li>Cache local de taxas de mercado (expira em 24h)</li>
+        <li>Dados do AdMob (ID de publicidade, IP)</li>
+      </ul>
+
+      <p><strong>Como usamos:</strong></p>
+      <ul>
+        <li>Exibir taxas de mercado atualizadas (SELIC, CDI, IPCA, moedas, cripto)</li>
+        <li>Exibir anúncios em banner</li>
+      </ul>
+
+      <p><strong>O que NÃO fazemos:</strong></p>
+      <ul>
+        <li>Não coletamos valores das simulações</li>
+        <li>Não temos servidor próprio</li>
+        <li>Não exigimos cadastro</li>
+        <li>Não compartilhamos dados financeiros</li>
+      </ul>
+
+      <p><strong>Contato:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Versão 1.0 &middot; Data de vigência: 7 de abril de 2026</p>
+      <p>&copy; 2026 PWL Apps. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
