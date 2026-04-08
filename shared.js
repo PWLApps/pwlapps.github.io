@@ -24,8 +24,8 @@ var PWL_APPS = {
     },
     'invest-calc': {
         version: '1.0',
-        appName: { pt: 'Finança Pro', en: 'Finança Pro' },
-        appFullName: { pt: 'Finança Pro - Calculadoras Financeiras', en: 'Finança Pro - Financial Calculators' },
+        appName: { pt: 'InvestCalc', en: 'InvestCalc' },
+        appFullName: { pt: 'InvestCalc - Calculadoras Financeiras', en: 'InvestCalc - Financial Calculators' },
         description: {
             pt: 'Calculadoras financeiras completas: juros compostos, renda fixa, equivalência de investimentos, independência financeira e cotações em tempo real.',
             en: 'Complete financial calculators: compound interest, fixed income, investment comparison, financial independence and real-time quotes.'
