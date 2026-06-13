@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de Privacidade - Clube do Livro</title>
+  <meta name="description" content="Política de Privacidade do Clube do Livro - Clubes de Leitura (PWL Apps)." />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
+      --border:#1f2937; --accent:#a78bfa; --link:#93c5fd;
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    header{
+      padding:40px 16px 12px; border-bottom:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(167,139,250,.12), rgba(0,0,0,0));
+    }
+    .wrap{max-width:960px; margin:0 auto; padding:0 16px}
+    h1{margin:0 0 8px; font-size:28px}
+    .meta{color:var(--muted); margin:0}
+    main{padding:24px 0 56px}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:20px; margin:16px 0;
+    }
+    h2{margin:0 0 10px; font-size:20px}
+    h3{margin:18px 0 8px; font-size:16px; color:var(--text)}
+    h4{margin:14px 0 6px; font-size:14px; color:var(--text)}
+    p, li{color:var(--text)}
+    ul, ol{padding-left:20px; margin:8px 0}
+    li{margin:4px 0}
+    a{color:var(--link)}
+    code{background:rgba(255,255,255,.06); padding:.15em .35em; border-radius:6px}
+    hr{border:none; border-top:1px solid var(--border); margin:18px 0}
+    table{
+      width:100%; border-collapse:collapse; margin-top:10px; overflow:hidden; border-radius:12px;
+      border:1px solid var(--border);
+    }
+    th, td{padding:12px 10px; border-bottom:1px solid var(--border); vertical-align:top; text-align:left}
+    th{background:rgba(255,255,255,.04)}
+    tr:last-child td{border-bottom:none}
+    .badge{
+      display:inline-block; padding:2px 10px; border:1px solid rgba(167,139,250,.35);
+      border-radius:999px; color:#ddd6fe; font-size:12px; margin-left:8px;
+    }
+    .back-link{
+      display:inline-block; margin-bottom:16px; color:var(--accent); text-decoration:none;
+      font-size:14px;
+    }
+    .back-link:hover{text-decoration:underline}
+    footer{
+      border-top:1px solid var(--border); padding:20px 0; color:var(--muted); text-align:center;
+      font-size:0.85rem;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7f7fb; --card:#ffffff; --text:#111827; --muted:#4b5563;
+        --border:#e5e7eb; --accent:#7c3aed; --link:#2563eb;
+      }
+      code{background:#f3f4f6}
+      header{background:linear-gradient(180deg, rgba(124,58,237,.10), rgba(255,255,255,0))}
+    }
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 6px 16px;
+      cursor: pointer;
+      z-index: 100;
+      user-select: none;
+    }
+    .lang-toggle .flag {
+      font-size: 1.2rem;
+      opacity: 0.4;
+      transition: opacity 0.2s;
+      line-height: 1;
+    }
+    .lang-toggle .flag.active {
+      opacity: 1;
+    }
+    .lang-toggle .switch {
+      width: 36px;
+      height: 20px;
+      background: var(--border);
+      border-radius: 10px;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .lang-toggle .switch::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s;
+    }
+    .lang-toggle.en .switch::after {
+      transform: translateX(16px);
+    }
+    .content-en { display: none; }
+  </style>
+</head>
+<body>
+  <div id="privacy-toggle"></div>
+  <div id="privacy-header"></div>
+
+  <div class="content-pt">
+  <main class="wrap">
+
+    <section class="card" id="introduction">
+      <h2>1. Introdução</h2>
+      <p>
+        Esta Política de Privacidade descreve como o Clube do Livro ("nós", "nosso" ou "aplicativo") coleta, usa, armazena
+        e protege suas informações pessoais quando você utiliza nosso aplicativo de clubes de leitura.
+      </p>
+      <p>
+        O Clube do Livro é um aplicativo social: você cria uma conta, monta seu perfil, participa de clubes de leitura,
+        agenda reuniões, conversa no mural, organiza enquetes e mantém sua estante de livros. Por ser um app com conta e
+        conteúdo compartilhado entre membros, tratamos seus dados com atenção e transparência.
+      </p>
+      <p>
+        Ao usar o Clube do Livro, você concorda com a coleta e uso de informações de acordo com esta política.
+        Recomendamos que você a leia com atenção antes de usar o aplicativo.
+      </p>
+      <p>
+        <strong>Idade mínima:</strong> Este aplicativo é destinado a usuários com 13 anos ou mais.
+        Não coletamos intencionalmente informações de crianças menores de 13 anos.
+      </p>
+    </section>
+
+    <section class="card" id="information-we-collect">
+      <h2>2. Informações que Coletamos</h2>
+
+      <h3>2.1 Informações de Conta</h3>
+      <p>Para criar e acessar sua conta, coletamos:</p>
+      <ul>
+        <li><strong>E-mail:</strong> usado para login, verificação de conta e recuperação de senha</li>
+        <li><strong>Senha:</strong> armazenada de forma segura (com hash) pelo nosso backend — nunca em texto puro</li>
+        <li><strong>Login com Google (opcional):</strong> se você optar por entrar com sua conta Google, recebemos seu e-mail, nome e foto de perfil da conta Google para criar ou acessar sua conta</li>
+      </ul>
+
+      <h3>2.2 Informações de Perfil</h3>
+      <ul>
+        <li><strong>Nome de exibição:</strong> como você quer ser chamado no app</li>
+        <li><strong>Nome de usuário (@handle):</strong> identificador único dentro do app</li>
+        <li><strong>Bio:</strong> texto curto e opcional sobre você</li>
+        <li><strong>Foto de perfil (avatar):</strong> opcional, enviada por você e armazenada em nosso storage (comprimida para até 1024×1024)</li>
+      </ul>
+
+      <h3>2.3 Conteúdo que Você Cria</h3>
+      <p>O app armazena o conteúdo que você produz para que o aplicativo funcione:</p>
+      <ul>
+        <li><strong>Clubes:</strong> nome, descrição, tags, cor e foto de capa dos clubes que você cria</li>
+        <li><strong>Participações:</strong> de quais clubes você é membro e seu papel (administrador ou membro)</li>
+        <li><strong>Reuniões:</strong> data, formato (online ou presencial), endereço ou local, link da videochamada, página de leitura e recados</li>
+        <li><strong>Mural e comentários:</strong> cards publicados e comentários nas threads dos clubes</li>
+        <li><strong>Enquetes e votos:</strong> enquetes que você cria e seus votos — <strong>os votos são secretos</strong> (apenas a contagem é pública; ninguém vê em quem cada pessoa votou)</li>
+        <li><strong>Estante e leituras:</strong> livros que você está lendo, quer ler ou já leu, e o status de cada um</li>
+        <li><strong>Avaliações de livros:</strong> notas (de 1 a 5 estrelas) que você dá aos livros — estas são <strong>públicas</strong> e contam para a média do livro</li>
+        <li><strong>Feedback:</strong> mensagens que você envia pela tela de feedback (acompanhadas do seu e-mail de cadastro)</li>
+      </ul>
+
+      <h3>2.4 Informações Coletadas Automaticamente</h3>
+      <ul>
+        <li><strong>Token de notificação (FCM):</strong> um identificador do dispositivo gerado pelo Firebase Cloud Messaging para enviar notificações push (Android)</li>
+        <li><strong>Dados técnicos:</strong> versão do aplicativo e informações básicas do dispositivo/sistema operacional necessárias para o funcionamento</li>
+        <li><strong>Logs de servidor:</strong> endereço IP e dados técnicos das requisições (timestamps), registrados pelo nosso backend para operação e segurança</li>
+      </ul>
+
+      <h3>2.5 Informações de Terceiros</h3>
+
+      <h4>Google (Login e Notificações)</h4>
+      <ul>
+        <li>Dados da conta Google ao usar "Entrar com o Google" (e-mail, nome, foto)</li>
+        <li>Token de notificações via Firebase Cloud Messaging</li>
+      </ul>
+
+      <h4>Google Books</h4>
+      <p>
+        Quando você busca um livro, sua consulta é enviada à API do Google Books (por meio do nosso servidor) para
+        retornar títulos, autores, capas e sinopses. A requisição ao Google é feita pelo nosso backend, não diretamente
+        pelo seu dispositivo.
+      </p>
+    </section>
+
+    <section class="card" id="how-we-use">
+      <h2>3. Como Usamos as Informações</h2>
+
+      <h3>3.1 Finalidades Principais</h3>
+      <ul>
+        <li><strong>Criar e gerenciar sua conta:</strong> autenticação, verificação de e-mail e recuperação de senha</li>
+        <li><strong>Fazer o app funcionar:</strong> exibir seu perfil, seus clubes, reuniões, mural, enquetes e estante para você e para os membros certos</li>
+        <li><strong>Compartilhar conteúdo entre membros:</strong> permitir que membros de um mesmo clube vejam o mural, as reuniões e as enquetes daquele clube</li>
+        <li><strong>Buscar livros:</strong> retornar resultados de busca via Google Books e montar o catálogo</li>
+        <li><strong>Enviar notificações:</strong> avisar sobre atividades relevantes nos seus clubes (notificações push)</li>
+        <li><strong>Responder a feedback e suporte:</strong> usar seu e-mail para responder solicitações que você nos enviar</li>
+        <li><strong>Segurança:</strong> validar identidade, prevenir abuso e proteger as contas</li>
+      </ul>
+
+      <h3>3.2 Base Legal (LGPD/GDPR)</h3>
+      <ul>
+        <li><strong>Execução de contrato:</strong> processar seus dados é necessário para fornecer o serviço que você solicitou (participar de clubes de leitura)</li>
+        <li><strong>Consentimento:</strong> ao criar sua conta e aceitar esta política, você consente com o processamento descrito aqui</li>
+        <li><strong>Interesses legítimos:</strong> manter a segurança, prevenir fraudes e melhorar o aplicativo</li>
+      </ul>
+    </section>
+
+    <section class="card" id="sharing">
+      <h2>4. Compartilhamento de Informações</h2>
+
+      <p>
+        <strong>Não vendemos seus dados.</strong> O Clube do Livro <strong>não exibe anúncios</strong> e não compartilha
+        suas informações com redes de publicidade. Compartilhamos dados apenas com os serviços estritamente necessários
+        para o app funcionar:
+      </p>
+
+      <h3>4.1 Serviços de Terceiros</h3>
+
+      <h4>Google — Login (Google Sign-In)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> ao escolher entrar com o Google, validamos sua identidade com o Google e recebemos e-mail, nome e foto</li>
+        <li><strong>Finalidade:</strong> autenticação sem senha</li>
+        <li><strong>Política:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+      </ul>
+
+      <h4>Google — Firebase Cloud Messaging (Notificações)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> token de notificação do dispositivo</li>
+        <li><strong>Finalidade:</strong> entregar notificações push</li>
+        <li><strong>Política:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <h4>Google Books</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> o termo de busca digitado (enviado pelo nosso servidor)</li>
+        <li><strong>Finalidade:</strong> retornar dados de livros (título, autor, capa, sinopse)</li>
+        <li><strong>Política:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+      </ul>
+
+      <h3>4.2 Backend Próprio (Appwrite)</h3>
+      <p>
+        Sua conta e seu conteúdo ficam no nosso backend próprio, operado pela PWL Apps com o software Appwrite
+        (autenticação, banco de dados e armazenamento de arquivos). Os dados não são repassados a um operador
+        de nuvem terceirizado para fins próprios — ficam sob nossa responsabilidade direta.
+      </p>
+
+      <h3>4.3 Compartilhamento entre Membros</h3>
+      <p>
+        Por ser um app social, parte do seu conteúdo é visível a outros usuários conforme você decide:
+      </p>
+      <ul>
+        <li>Seu <strong>nome, @ e foto</strong> são públicos quando você participa de clubes e publica conteúdo</li>
+        <li>O conteúdo de um clube (mural, reuniões, enquetes) é visível aos <strong>membros daquele clube</strong></li>
+        <li>Clubes <strong>públicos</strong> aparecem na descoberta; clubes <strong>privados/por convite</strong> só são acessíveis por link ou aprovação</li>
+        <li>Sua <strong>estante e seus clubes</strong> podem ficar privados pelo botão de privacidade do perfil (ver seção 8)</li>
+        <li>Seus <strong>votos em enquetes são secretos</strong></li>
+      </ul>
+
+      <h3>4.4 Transferência Internacional de Dados</h3>
+      <p>Alguns serviços podem processar dados em servidores fora do Brasil:</p>
+      <ul>
+        <li>Estados Unidos (Google — Login, Firebase, Google Books)</li>
+      </ul>
+      <p>
+        Essas transferências contam com salvaguardas adequadas, incluindo conformidade com o GDPR pelos provedores.
+      </p>
+
+      <h3>4.5 Situações Legais</h3>
+      <p>Podemos divulgar suas informações se:</p>
+      <ul>
+        <li>Exigido por lei ou processo legal</li>
+        <li>Para proteger nossos direitos, propriedade ou segurança</li>
+        <li>Para prevenir fraudes ou atividades ilegais</li>
+      </ul>
+    </section>
+
+    <section class="card" id="storage-security">
+      <h2>5. Armazenamento e Segurança de Dados</h2>
+
+      <h3>5.1 Onde Seus Dados Ficam</h3>
+      <ul>
+        <li><strong>Conta e conteúdo:</strong> armazenados no nosso backend próprio (Appwrite), com a senha protegida por hash</li>
+        <li><strong>Fotos (avatar e capa):</strong> armazenadas no nosso storage, comprimidas no envio</li>
+        <li><strong>No dispositivo:</strong> sua sessão de login e preferências básicas ficam localmente para manter você conectado</li>
+      </ul>
+
+      <h3>5.2 Controle de Acesso</h3>
+      <p>
+        O acesso ao conteúdo é controlado por permissões por documento e por clube (cada clube tem um grupo de membros).
+        Isso garante que apenas os membros de um clube vejam o conteúdo daquele clube, e que apenas você escreva no seu
+        próprio perfil e na sua estante.
+      </p>
+
+      <h3>5.3 Retenção de Dados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de Dado</th>
+            <th>Período de Retenção</th>
+            <th>Localização</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Conta, perfil e conteúdo</td>
+            <td>Até você excluir o conteúdo ou solicitar a exclusão da conta</td>
+            <td>Backend PWL Apps</td>
+          </tr>
+          <tr>
+            <td>Fotos (avatar e capa)</td>
+            <td>Até serem substituídas ou removidas</td>
+            <td>Storage PWL Apps</td>
+          </tr>
+          <tr>
+            <td>Token de notificação</td>
+            <td>Enquanto você mantiver as notificações ativas</td>
+            <td>Backend PWL Apps / Google FCM</td>
+          </tr>
+          <tr>
+            <td>Logs de servidor</td>
+            <td>Período limitado, para operação e segurança</td>
+            <td>Backend PWL Apps</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="your-rights">
+      <h2>6. Seus Direitos (LGPD e GDPR)</h2>
+
+      <h3>6.1 Direitos Garantidos</h3>
+      <ul>
+        <li><strong>Acesso:</strong> solicitar cópias dos seus dados pessoais</li>
+        <li><strong>Retificação:</strong> corrigir dados imprecisos — boa parte você edita direto no perfil do app</li>
+        <li><strong>Exclusão:</strong> excluir seu conteúdo no app ou solicitar a exclusão da sua conta e dados ("direito ao esquecimento")</li>
+        <li><strong>Portabilidade:</strong> receber seus dados em formato estruturado e legível por máquina</li>
+        <li><strong>Oposição:</strong> opor-se a determinado processamento de dados</li>
+        <li><strong>Revogação de consentimento:</strong> retirar seu consentimento a qualquer momento</li>
+        <li><strong>Confirmação de tratamento:</strong> confirmar se seus dados estão sendo processados</li>
+      </ul>
+
+      <h3>6.2 Como Exercer Seus Direitos</h3>
+      <p>
+        Boa parte dos seus dados você gerencia dentro do próprio app (editar perfil, excluir conteúdo, sair de clubes).
+        Para solicitar a <strong>exclusão da conta</strong>, uma cópia dos seus dados, ou qualquer outro direito, envie um e-mail para:
+        <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong>
+      </p>
+      <p>Responderemos sua solicitação em até <strong>15 dias úteis</strong> (conforme LGPD).</p>
+    </section>
+
+    <section class="card" id="push-notifications">
+      <h2>7. Notificações Push</h2>
+      <p>
+        Com a sua permissão, enviamos notificações sobre atividades relevantes nos seus clubes. As notificações são
+        entregues pelo Firebase Cloud Messaging (Google), que utiliza um token do seu dispositivo.
+      </p>
+      <p><strong>Como desativar:</strong></p>
+      <ul>
+        <li>Desative as notificações do Clube do Livro nas configurações do seu dispositivo, a qualquer momento</li>
+        <li>Ao desinstalar o app, o token deixa de ser válido</li>
+      </ul>
+    </section>
+
+    <section class="card" id="content-visibility">
+      <h2>8. Conteúdo do Usuário e Privacidade entre Membros</h2>
+
+      <h3>8.1 O que é Público</h3>
+      <ul>
+        <li>Seu nome de exibição, @ e foto de perfil</li>
+        <li>As avaliações (estrelas) que você dá aos livros</li>
+        <li>Clubes públicos e seu conteúdo, para os respectivos membros</li>
+      </ul>
+
+      <h3>8.2 O que Você Controla</h3>
+      <ul>
+        <li><strong>Perfil privado:</strong> um botão único deixa sua <strong>estante</strong> e seus <strong>clubes</strong> ocultos para outros usuários (tudo ou nada). Seu nome, @, bio e foto continuam visíveis.</li>
+        <li><strong>Privacidade do clube:</strong> administradores definem se um clube é público (aparece na descoberta) ou por convite/privado.</li>
+        <li><strong>Votos secretos:</strong> ninguém vê em quem você votou nas enquetes — apenas a contagem total é exibida.</li>
+      </ul>
+
+      <h3>8.3 Conteúdo de Outros Membros</h3>
+      <p>
+        Ao sair ou ser removido de um clube, você perde o acesso ao conteúdo daquele clube, mas comentários e votos que
+        você já deixou podem permanecer no histórico do clube. Se desejar a remoção desse conteúdo, entre em contato.
+      </p>
+    </section>
+
+    <section class="card" id="external-links">
+      <h2>9. Links Externos</h2>
+      <p>
+        O aplicativo pode abrir links externos — por exemplo, o link de uma videochamada de reunião ou o endereço de um
+        encontro presencial no mapa. Não somos responsáveis pelas práticas de privacidade desses sites e serviços.
+        Recomendamos que você leia as políticas de privacidade de qualquer serviço que visitar.
+      </p>
+    </section>
+
+    <section class="card" id="changes">
+      <h2>10. Alterações nesta Política</h2>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre mudanças significativas:</p>
+      <ul>
+        <li>Publicando a nova política nesta página</li>
+        <li>Quando aplicável, avisando dentro do aplicativo</li>
+        <li>Atualizando a data "Última atualização" no topo deste documento</li>
+      </ul>
+      <p>O uso continuado do aplicativo após alterações constitui aceitação da política atualizada.</p>
+    </section>
+
+    <section class="card" id="security">
+      <h2>11. Segurança de Dados</h2>
+
+      <h3>11.1 Medidas Técnicas</h3>
+      <ul>
+        <li><strong>Criptografia em trânsito:</strong> HTTPS/TLS para todas as comunicações</li>
+        <li><strong>Senhas protegidas:</strong> armazenadas com hash, nunca em texto puro</li>
+        <li><strong>Permissões por documento e por clube:</strong> cada conteúdo só é acessível a quem tem direito</li>
+        <li><strong>Verificação de e-mail:</strong> exigida para escrever conteúdo, validada no servidor</li>
+        <li><strong>Operações sensíveis no servidor:</strong> ações que envolvem membros e permissões são validadas no backend, não apenas no app</li>
+      </ul>
+
+      <h3>11.2 Limitações</h3>
+      <p>
+        Nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.
+        Embora nos esforcemos para proteger seus dados, não podemos garantir segurança absoluta.
+      </p>
+    </section>
+
+    <section class="card" id="children">
+      <h2>12. Dados de Menores de Idade</h2>
+      <p><strong>Este aplicativo não é direcionado a crianças menores de 13 anos.</strong></p>
+      <p>
+        Não coletamos intencionalmente informações pessoais de menores de 13 anos. Se você é pai/mãe ou responsável e acredita
+        que seu filho forneceu dados pessoais, entre em contato conosco em
+        <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong> para que possamos tomar as medidas apropriadas.
+      </p>
+      <p><strong>Usuários entre 13-18 anos:</strong> Recomendamos que menores de 18 anos obtenham permissão dos pais ou responsáveis antes de usar o aplicativo.</p>
+    </section>
+
+    <section class="card" id="jurisdiction">
+      <h2>13. Jurisdição e Lei Aplicável</h2>
+
+      <h3>13.1 Usuários no Brasil</h3>
+      <p>Esta política é regida pela Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018).</p>
+
+      <h3>13.2 Usuários na União Europeia</h3>
+      <p>Para usuários na UE, esta política também está em conformidade com o Regulamento Geral de Proteção de Dados (GDPR).</p>
+
+      <h3>13.3 Reclamações</h3>
+      <p>Você tem o direito de registrar uma reclamação junto à:</p>
+      <ul>
+        <li><strong>Brasil:</strong> Autoridade Nacional de Proteção de Dados (ANPD) - <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">https://www.gov.br/anpd</a></li>
+        <li><strong>UE:</strong> Autoridade de proteção de dados do seu país</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>14. Contato</h2>
+      <p>Se você tiver dúvidas, preocupações ou solicitações relacionadas a esta Política de Privacidade ou ao tratamento de seus dados pessoais, entre em contato:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a><br/>
+        <strong>Desenvolvedor:</strong> PWL Apps<br/>
+        <strong>Aplicativo:</strong> Clube do Livro - Clubes de Leitura
+      </p>
+      <p>Responderemos suas solicitações em até 15 dias úteis.</p>
+    </section>
+
+    <section class="card" id="tldr">
+      <h2>15. Resumo Rápido (TL;DR)</h2>
+
+      <p><strong>O que coletamos:</strong></p>
+      <ul>
+        <li>Conta (e-mail, senha com hash) ou login Google (e-mail, nome, foto)</li>
+        <li>Perfil (nome, @, bio, foto) e o conteúdo que você cria (clubes, reuniões, mural, enquetes, estante, avaliações)</li>
+        <li>Token de notificação e logs técnicos do servidor</li>
+      </ul>
+
+      <p><strong>Como usamos:</strong></p>
+      <ul>
+        <li>Fazer o app de clubes de leitura funcionar</li>
+        <li>Compartilhar conteúdo entre os membros certos</li>
+        <li>Buscar livros (Google Books) e enviar notificações (Firebase)</li>
+      </ul>
+
+      <p><strong>O que NÃO fazemos:</strong></p>
+      <ul>
+        <li>Não exibimos anúncios</li>
+        <li>Não vendemos seus dados</li>
+        <li>Não revelamos em quem você votou (votos secretos)</li>
+      </ul>
+
+      <p><strong>Seus direitos:</strong></p>
+      <ul>
+        <li>Editar e excluir seu conteúdo no app</li>
+        <li>Solicitar exclusão da conta e dos dados por e-mail</li>
+        <li>Deixar estante e clubes privados, e desativar notificações</li>
+      </ul>
+
+      <p><strong>Contato:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></p>
+    </section>
+
+  </main>
+  </div>
+
+  <div class="content-en">
+  <main class="wrap">
+
+    <section class="card" id="introduction-en">
+      <h2>1. Introduction</h2>
+      <p>
+        This Privacy Policy describes how Bookclub ("we", "our" or "application") collects, uses, stores and protects your
+        personal information when you use our reading clubs application.
+      </p>
+      <p>
+        Bookclub is a social app: you create an account, set up your profile, join reading clubs, schedule meetings, chat
+        on the wall, run polls and keep your book shelf. Because it is an app with accounts and content shared between
+        members, we handle your data carefully and transparently.
+      </p>
+      <p>
+        By using Bookclub, you agree to the collection and use of information in accordance with this policy. We recommend
+        that you read it carefully before using the application.
+      </p>
+      <p>
+        <strong>Minimum age:</strong> This application is intended for users aged 13 or older. We do not intentionally
+        collect information from children under 13.
+      </p>
+    </section>
+
+    <section class="card" id="information-we-collect-en">
+      <h2>2. Information We Collect</h2>
+
+      <h3>2.1 Account Information</h3>
+      <p>To create and access your account, we collect:</p>
+      <ul>
+        <li><strong>Email:</strong> used for login, account verification and password recovery</li>
+        <li><strong>Password:</strong> securely stored (hashed) by our backend — never in plain text</li>
+        <li><strong>Google Sign-In (optional):</strong> if you choose to sign in with your Google account, we receive your email, name and profile picture from Google to create or access your account</li>
+      </ul>
+
+      <h3>2.2 Profile Information</h3>
+      <ul>
+        <li><strong>Display name:</strong> how you want to be called in the app</li>
+        <li><strong>Username (@handle):</strong> a unique identifier within the app</li>
+        <li><strong>Bio:</strong> a short, optional text about you</li>
+        <li><strong>Profile picture (avatar):</strong> optional, uploaded by you and stored in our storage (compressed to up to 1024×1024)</li>
+      </ul>
+
+      <h3>2.3 Content You Create</h3>
+      <p>The app stores the content you produce so the application can work:</p>
+      <ul>
+        <li><strong>Clubs:</strong> name, description, tags, color and cover photo of the clubs you create</li>
+        <li><strong>Memberships:</strong> which clubs you belong to and your role (admin or member)</li>
+        <li><strong>Meetings:</strong> date, format (online or in person), address or location, video call link, reading page and notes</li>
+        <li><strong>Wall and comments:</strong> cards posted and comments in club threads</li>
+        <li><strong>Polls and votes:</strong> polls you create and your votes — <strong>votes are secret</strong> (only the count is public; nobody sees who each person voted for)</li>
+        <li><strong>Shelf and readings:</strong> books you are reading, want to read or have read, and the status of each</li>
+        <li><strong>Book ratings:</strong> ratings (1 to 5 stars) you give to books — these are <strong>public</strong> and count toward the book's average</li>
+        <li><strong>Feedback:</strong> messages you send through the feedback screen (together with your account email)</li>
+      </ul>
+
+      <h3>2.4 Automatically Collected Information</h3>
+      <ul>
+        <li><strong>Notification token (FCM):</strong> a device identifier generated by Firebase Cloud Messaging to send push notifications (Android)</li>
+        <li><strong>Technical data:</strong> app version and basic device/operating system information needed to operate</li>
+        <li><strong>Server logs:</strong> IP address and technical request data (timestamps), recorded by our backend for operation and security</li>
+      </ul>
+
+      <h3>2.5 Third-Party Information</h3>
+
+      <h4>Google (Login and Notifications)</h4>
+      <ul>
+        <li>Google account data when using "Sign in with Google" (email, name, picture)</li>
+        <li>Notification token via Firebase Cloud Messaging</li>
+      </ul>
+
+      <h4>Google Books</h4>
+      <p>
+        When you search for a book, your query is sent to the Google Books API (through our server) to return titles,
+        authors, covers and synopses. The request to Google is made by our backend, not directly by your device.
+      </p>
+    </section>
+
+    <section class="card" id="how-we-use-en">
+      <h2>3. How We Use the Information</h2>
+
+      <h3>3.1 Main Purposes</h3>
+      <ul>
+        <li><strong>Create and manage your account:</strong> authentication, email verification and password recovery</li>
+        <li><strong>Make the app work:</strong> show your profile, your clubs, meetings, wall, polls and shelf to you and the right members</li>
+        <li><strong>Share content between members:</strong> allow members of the same club to see that club's wall, meetings and polls</li>
+        <li><strong>Search books:</strong> return search results via Google Books and build the catalog</li>
+        <li><strong>Send notifications:</strong> notify you about relevant activity in your clubs (push notifications)</li>
+        <li><strong>Respond to feedback and support:</strong> use your email to reply to requests you send us</li>
+        <li><strong>Security:</strong> validate identity, prevent abuse and protect accounts</li>
+      </ul>
+
+      <h3>3.2 Legal Basis (LGPD/GDPR)</h3>
+      <ul>
+        <li><strong>Contract execution:</strong> processing your data is necessary to provide the service you requested (joining reading clubs)</li>
+        <li><strong>Consent:</strong> by creating your account and accepting this policy, you consent to the processing described here</li>
+        <li><strong>Legitimate interests:</strong> maintaining security, preventing fraud and improving the application</li>
+      </ul>
+    </section>
+
+    <section class="card" id="sharing-en">
+      <h2>4. Information Sharing</h2>
+
+      <p>
+        <strong>We do not sell your data.</strong> Bookclub <strong>does not display ads</strong> and does not share your
+        information with advertising networks. We share data only with the services strictly necessary to run the app:
+      </p>
+
+      <h3>4.1 Third-Party Services</h3>
+
+      <h4>Google — Login (Google Sign-In)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> when you choose to sign in with Google, we validate your identity with Google and receive email, name and picture</li>
+        <li><strong>Purpose:</strong> passwordless authentication</li>
+        <li><strong>Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+      </ul>
+
+      <h4>Google — Firebase Cloud Messaging (Notifications)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> device notification token</li>
+        <li><strong>Purpose:</strong> deliver push notifications</li>
+        <li><strong>Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <h4>Google Books</h4>
+      <ul>
+        <li><strong>Data shared:</strong> the search term you type (sent by our server)</li>
+        <li><strong>Purpose:</strong> return book data (title, author, cover, synopsis)</li>
+        <li><strong>Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+      </ul>
+
+      <h3>4.2 Our Own Backend (Appwrite)</h3>
+      <p>
+        Your account and content live on our own backend, operated by PWL Apps using the Appwrite software
+        (authentication, database and file storage). The data is not handed over to a third-party cloud operator for its
+        own purposes — it remains under our direct responsibility.
+      </p>
+
+      <h3>4.3 Sharing Between Members</h3>
+      <p>
+        Because this is a social app, part of your content is visible to other users as you decide:
+      </p>
+      <ul>
+        <li>Your <strong>name, @ and picture</strong> are public when you join clubs and post content</li>
+        <li>A club's content (wall, meetings, polls) is visible to the <strong>members of that club</strong></li>
+        <li><strong>Public</strong> clubs appear in discovery; <strong>private/invite-only</strong> clubs are only accessible by link or approval</li>
+        <li>Your <strong>shelf and clubs</strong> can be made private via the profile privacy toggle (see section 8)</li>
+        <li>Your <strong>poll votes are secret</strong></li>
+      </ul>
+
+      <h3>4.4 International Data Transfer</h3>
+      <p>Some services may process data on servers outside Brazil:</p>
+      <ul>
+        <li>United States (Google — Login, Firebase, Google Books)</li>
+      </ul>
+      <p>
+        These transfers rely on adequate safeguards, including GDPR compliance by the providers.
+      </p>
+
+      <h3>4.5 Legal Situations</h3>
+      <p>We may disclose your information if:</p>
+      <ul>
+        <li>Required by law or legal process</li>
+        <li>To protect our rights, property or safety</li>
+        <li>To prevent fraud or illegal activities</li>
+      </ul>
+    </section>
+
+    <section class="card" id="storage-security-en">
+      <h2>5. Data Storage and Security</h2>
+
+      <h3>5.1 Where Your Data Lives</h3>
+      <ul>
+        <li><strong>Account and content:</strong> stored on our own backend (Appwrite), with the password protected by hashing</li>
+        <li><strong>Photos (avatar and cover):</strong> stored in our storage, compressed on upload</li>
+        <li><strong>On the device:</strong> your login session and basic preferences are kept locally to keep you signed in</li>
+      </ul>
+
+      <h3>5.2 Access Control</h3>
+      <p>
+        Access to content is controlled by per-document and per-club permissions (each club has a group of members). This
+        ensures that only a club's members see that club's content, and that only you can write to your own profile and shelf.
+      </p>
+
+      <h3>5.3 Data Retention</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Retention Period</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account, profile and content</td>
+            <td>Until you delete the content or request account deletion</td>
+            <td>PWL Apps backend</td>
+          </tr>
+          <tr>
+            <td>Photos (avatar and cover)</td>
+            <td>Until replaced or removed</td>
+            <td>PWL Apps storage</td>
+          </tr>
+          <tr>
+            <td>Notification token</td>
+            <td>While you keep notifications enabled</td>
+            <td>PWL Apps backend / Google FCM</td>
+          </tr>
+          <tr>
+            <td>Server logs</td>
+            <td>Limited period, for operation and security</td>
+            <td>PWL Apps backend</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="your-rights-en">
+      <h2>6. Your Rights (LGPD and GDPR)</h2>
+
+      <h3>6.1 Guaranteed Rights</h3>
+      <ul>
+        <li><strong>Access:</strong> request copies of your personal data</li>
+        <li><strong>Rectification:</strong> correct inaccurate data — much of it you edit directly in the app profile</li>
+        <li><strong>Deletion:</strong> delete your content in the app or request deletion of your account and data ("right to be forgotten")</li>
+        <li><strong>Portability:</strong> receive your data in a structured, machine-readable format</li>
+        <li><strong>Opposition:</strong> object to certain data processing</li>
+        <li><strong>Consent revocation:</strong> withdraw your consent at any time</li>
+        <li><strong>Processing confirmation:</strong> confirm whether your data is being processed</li>
+      </ul>
+
+      <h3>6.2 How to Exercise Your Rights</h3>
+      <p>
+        You manage much of your data within the app itself (edit profile, delete content, leave clubs). To request
+        <strong>account deletion</strong>, a copy of your data, or any other right, send an email to:
+        <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong>
+      </p>
+      <p>We will respond to your request within <strong>15 business days</strong> (as per LGPD).</p>
+    </section>
+
+    <section class="card" id="push-notifications-en">
+      <h2>7. Push Notifications</h2>
+      <p>
+        With your permission, we send notifications about relevant activity in your clubs. Notifications are delivered by
+        Firebase Cloud Messaging (Google), which uses a token from your device.
+      </p>
+      <p><strong>How to disable:</strong></p>
+      <ul>
+        <li>Disable Bookclub notifications in your device settings, at any time</li>
+        <li>When you uninstall the app, the token stops being valid</li>
+      </ul>
+    </section>
+
+    <section class="card" id="content-visibility-en">
+      <h2>8. User Content and Privacy Between Members</h2>
+
+      <h3>8.1 What is Public</h3>
+      <ul>
+        <li>Your display name, @ and profile picture</li>
+        <li>The ratings (stars) you give to books</li>
+        <li>Public clubs and their content, for the respective members</li>
+      </ul>
+
+      <h3>8.2 What You Control</h3>
+      <ul>
+        <li><strong>Private profile:</strong> a single toggle hides your <strong>shelf</strong> and your <strong>clubs</strong> from other users (all or nothing). Your name, @, bio and picture remain visible.</li>
+        <li><strong>Club privacy:</strong> admins decide whether a club is public (appears in discovery) or invite-only/private.</li>
+        <li><strong>Secret votes:</strong> nobody sees who you voted for in polls — only the total count is shown.</li>
+      </ul>
+
+      <h3>8.3 Other Members' Content</h3>
+      <p>
+        When you leave or are removed from a club, you lose access to that club's content, but comments and votes you have
+        already left may remain in the club's history. If you want that content removed, please contact us.
+      </p>
+    </section>
+
+    <section class="card" id="external-links-en">
+      <h2>9. External Links</h2>
+      <p>
+        The application may open external links — for example, a meeting's video call link or an in-person meeting address
+        on the map. We are not responsible for the privacy practices of those sites and services. We recommend that you
+        read the privacy policies of any service you visit.
+      </p>
+    </section>
+
+    <section class="card" id="changes-en">
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy periodically. We will notify you of significant changes by:</p>
+      <ul>
+        <li>Publishing the new policy on this page</li>
+        <li>Where applicable, notifying you within the application</li>
+        <li>Updating the "Last updated" date at the top of this document</li>
+      </ul>
+      <p>Continued use of the application after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section class="card" id="security-en">
+      <h2>11. Data Security</h2>
+
+      <h3>11.1 Technical Measures</h3>
+      <ul>
+        <li><strong>Encryption in transit:</strong> HTTPS/TLS for all communications</li>
+        <li><strong>Protected passwords:</strong> stored hashed, never in plain text</li>
+        <li><strong>Per-document and per-club permissions:</strong> each piece of content is only accessible to those entitled to it</li>
+        <li><strong>Email verification:</strong> required to write content, validated on the server</li>
+        <li><strong>Sensitive operations on the server:</strong> actions involving members and permissions are validated on the backend, not only in the app</li>
+      </ul>
+
+      <h3>11.2 Limitations</h3>
+      <p>
+        No method of transmission over the Internet or electronic storage is 100% secure. Although we strive to protect
+        your data, we cannot guarantee absolute security.
+      </p>
+    </section>
+
+    <section class="card" id="children-en">
+      <h2>12. Minor's Data</h2>
+      <p><strong>This application is not directed at children under 13 years of age.</strong></p>
+      <p>
+        We do not intentionally collect personal information from children under 13. If you are a parent or guardian and believe
+        your child has provided personal data, please contact us at
+        <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong> so we can take appropriate action.
+      </p>
+      <p><strong>Users between 13-18 years:</strong> We recommend that minors under 18 obtain permission from parents or guardians before using the application.</p>
+    </section>
+
+    <section class="card" id="jurisdiction-en">
+      <h2>13. Jurisdiction and Applicable Law</h2>
+
+      <h3>13.1 Users in Brazil</h3>
+      <p>This policy is governed by the General Data Protection Law (LGPD - Law 13,709/2018).</p>
+
+      <h3>13.2 Users in the European Union</h3>
+      <p>For EU users, this policy also complies with the General Data Protection Regulation (GDPR).</p>
+
+      <h3>13.3 Complaints</h3>
+      <p>You have the right to file a complaint with:</p>
+      <ul>
+        <li><strong>Brazil:</strong> National Data Protection Authority (ANPD) - <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">https://www.gov.br/anpd</a></li>
+        <li><strong>EU:</strong> Data protection authority of your country</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact-en">
+      <h2>14. Contact</h2>
+      <p>If you have questions, concerns or requests related to this Privacy Policy or the processing of your personal data, please contact:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a><br/>
+        <strong>Developer:</strong> PWL Apps<br/>
+        <strong>Application:</strong> Bookclub - Reading Clubs
+      </p>
+      <p>We will respond to your requests within 15 business days.</p>
+    </section>
+
+    <section class="card" id="tldr-en">
+      <h2>15. Quick Summary (TL;DR)</h2>
+
+      <p><strong>What we collect:</strong></p>
+      <ul>
+        <li>Account (email, hashed password) or Google Sign-In (email, name, picture)</li>
+        <li>Profile (name, @, bio, picture) and the content you create (clubs, meetings, wall, polls, shelf, ratings)</li>
+        <li>Notification token and technical server logs</li>
+      </ul>
+
+      <p><strong>How we use it:</strong></p>
+      <ul>
+        <li>Make the reading clubs app work</li>
+        <li>Share content between the right members</li>
+        <li>Search books (Google Books) and send notifications (Firebase)</li>
+      </ul>
+
+      <p><strong>What we DON'T do:</strong></p>
+      <ul>
+        <li>We don't display ads</li>
+        <li>We don't sell your data</li>
+        <li>We don't reveal who you voted for (secret votes)</li>
+      </ul>
+
+      <p><strong>Your rights:</strong></p>
+      <ul>
+        <li>Edit and delete your content in the app</li>
+        <li>Request account and data deletion by email</li>
+        <li>Make your shelf and clubs private, and disable notifications</li>
+      </ul>
+
+      <p><strong>Contact:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></p>
+    </section>
+
+  </main>
+  </div>
+
+  <footer>
+    <div class="wrap" id="privacy-footer"></div>
+  </footer>
+
+  <script src="../../shared.js"></script>
+  <script>initPrivacyPage('bookclub-app');</script>
+</body>
+</html>

@@ -9,6 +9,19 @@ var PWL = {
 };
 
 var PWL_APPS = {
+    'bookclub-app': {
+        version: '1.0',
+        appName: { pt: 'Clube do Livro', en: 'Bookclub' },
+        appFullName: { pt: 'Clube do Livro - Clubes de Leitura', en: 'Bookclub - Reading Clubs' },
+        description: {
+            pt: 'Crie clubes de leitura, organize reuniões, monte sua estante e converse no mural com outros leitores.',
+            en: 'Create reading clubs, organize meetings, build your shelf and chat on the wall with fellow readers.'
+        },
+        storeUrl: 'https://play.google.com/store/apps/details?id=com.pwlapps.bookclub_app',
+        icon: 'assets/icons/bookclub.png',
+        privacyPath: '/privacy/bookclub-app/',
+        lastUpdated: { pt: '13 de junho de 2026', en: 'June 13, 2026' }
+    },
     'mystic-app': {
         version: '1.0',
         appName: { pt: 'Mystic App', en: 'Mystic App' },
