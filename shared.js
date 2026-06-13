@@ -4,6 +4,7 @@ var PWL = {
     copyright: '2026',
     subtitle: { pt: 'Nossos aplicativos', en: 'Our apps' },
     privacyLink: { pt: 'Política de Privacidade', en: 'Privacy Policy' },
+    deletionLink: { pt: 'Exclusão de conta', en: 'Delete account' },
     storeBadgeAlt: { pt: 'Disponível no Google Play', en: 'Get it on Google Play' },
     responseDays: { pt: '15 dias úteis', en: '15 business days' }
 };
@@ -20,6 +21,7 @@ var PWL_APPS = {
         storeUrl: 'https://play.google.com/store/apps/details?id=com.pwlapps.bookclub_app',
         icon: 'assets/icons/bookclub.png',
         privacyPath: '/privacy/bookclub-app/',
+        deletionPath: '/delete-account/bookclub-app/',
         lastUpdated: { pt: '13 de junho de 2026', en: 'June 13, 2026' }
     },
     'mystic-app': {
@@ -116,6 +118,7 @@ function renderHomeCards() {
             '<img src="' + storeBadge + '" data-pt-alt="' + PWL.storeBadgeAlt.pt + '" data-en-alt="' + PWL.storeBadgeAlt.en + '" alt="' + PWL.storeBadgeAlt.pt + '">' +
             '</div></a>' +
             '<a href="' + app.privacyPath + '" class="privacy-link" data-pt="' + PWL.privacyLink.pt + '" data-en="' + PWL.privacyLink.en + '">' + PWL.privacyLink.pt + '</a>' +
+            (app.deletionPath ? '<a href="' + app.deletionPath + '" class="privacy-link" data-pt="' + PWL.deletionLink.pt + '" data-en="' + PWL.deletionLink.en + '">' + PWL.deletionLink.pt + '</a>' : '') +
             '</div>';
     });
     return html;
@@ -135,6 +138,37 @@ function initPrivacyPage(appKey) {
     document.getElementById('privacy-toggle').innerHTML = renderLangToggle();
     document.getElementById('privacy-header').innerHTML = renderPrivacyHeader(appKey);
     document.getElementById('privacy-footer').innerHTML = renderPrivacyFooter(appKey);
+    applyLang();
+}
+
+function renderDeletionHeader(appKey) {
+    var app = PWL_APPS[appKey];
+    var labels = {
+        pt: { title: 'Exclusão de Conta e Dados', developer: 'Desenvolvedor', contactEmail: 'Email de contato', application: 'Aplicativo' },
+        en: { title: 'Account & Data Deletion', developer: 'Developer', contactEmail: 'Contact email', application: 'Application' }
+    };
+
+    var html = '';
+    ['pt', 'en'].forEach(function(lang) {
+        var l = labels[lang];
+        var cls = lang === 'en' ? 'content-en' : 'content-pt';
+        html += '<div class="' + cls + '">' +
+            '<header><div class="wrap">' +
+            '<a href="/" class="back-link">&larr; ' + PWL.developer + '</a>' +
+            '<h1>' + l.title + ' - ' + app.appName[lang] + '</h1>' +
+            '<p class="meta">' +
+            '<strong>' + l.developer + ':</strong> ' + PWL.developer + '<br/>' +
+            '<strong>' + l.contactEmail + ':</strong> <a href="mailto:' + PWL.email + '">' + PWL.email + '</a><br/>' +
+            '<strong>' + l.application + ':</strong> ' + app.appFullName[lang] +
+            '</p></div></header></div>';
+    });
+    return html;
+}
+
+function initDeletionPage(appKey) {
+    document.getElementById('deletion-toggle').innerHTML = renderLangToggle();
+    document.getElementById('deletion-header').innerHTML = renderDeletionHeader(appKey);
+    document.getElementById('deletion-footer').innerHTML = renderPrivacyFooter(appKey);
     applyLang();
 }
 

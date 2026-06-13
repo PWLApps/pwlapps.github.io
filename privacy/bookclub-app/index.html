@@ -132,6 +132,10 @@
         conteúdo compartilhado entre membros, tratamos seus dados com atenção e transparência.
       </p>
       <p>
+        O aplicativo é <strong>gratuito e exibe anúncios</strong>, e oferece <strong>compras opcionais</strong>
+        (como assinaturas) para desbloquear recursos adicionais.
+      </p>
+      <p>
         Ao usar o Clube do Livro, você concorda com a coleta e uso de informações de acordo com esta política.
         Recomendamos que você a leia com atenção antes de usar o aplicativo.
       </p>
@@ -188,11 +192,32 @@
         <li>Token de notificações via Firebase Cloud Messaging</li>
       </ul>
 
+      <h4>Google AdMob (Anúncios)</h4>
+      <ul>
+        <li>ID de publicidade do dispositivo (GAID no Android, IDFA no iOS)</li>
+        <li>Endereço IP</li>
+        <li>Dados de interação com anúncios</li>
+        <li>Informações do dispositivo</li>
+        <li>Dados de geolocalização aproximada</li>
+      </ul>
+
       <h4>Google Books</h4>
       <p>
         Quando você busca um livro, sua consulta é enviada à API do Google Books (por meio do nosso servidor) para
         retornar títulos, autores, capas e sinopses. A requisição ao Google é feita pelo nosso backend, não diretamente
         pelo seu dispositivo.
+      </p>
+
+      <h3>2.6 Informações de Compras e Assinaturas</h3>
+      <p>Quando você faz uma compra dentro do app ou assina um plano, coletamos e processamos:</p>
+      <ul>
+        <li><strong>Status e histórico de compra/assinatura:</strong> quais produtos você comprou, se a assinatura está ativa ou expirada — gerenciados pelo RevenueCat</li>
+        <li><strong>Identificador de compra:</strong> um identificador de usuário do app é enviado ao RevenueCat para vincular a compra à sua conta</li>
+        <li><strong>Recibos das lojas:</strong> dados de recibo/transação fornecidos pela Google Play ou Apple para validar a compra</li>
+      </ul>
+      <p>
+        O <strong>pagamento em si</strong> (cartão, dados bancários) é processado diretamente pela <strong>Google Play</strong> (Android)
+        ou pela <strong>Apple</strong> (iOS). <strong>Nós não recebemos nem armazenamos os dados do seu cartão.</strong>
       </p>
     </section>
 
@@ -206,15 +231,17 @@
         <li><strong>Compartilhar conteúdo entre membros:</strong> permitir que membros de um mesmo clube vejam o mural, as reuniões e as enquetes daquele clube</li>
         <li><strong>Buscar livros:</strong> retornar resultados de busca via Google Books e montar o catálogo</li>
         <li><strong>Enviar notificações:</strong> avisar sobre atividades relevantes nos seus clubes (notificações push)</li>
+        <li><strong>Exibir anúncios:</strong> o Google AdMob exibe anúncios para manter o aplicativo gratuito</li>
+        <li><strong>Processar compras e assinaturas:</strong> validar, restaurar e gerenciar compras via RevenueCat e as lojas (Google Play / Apple)</li>
         <li><strong>Responder a feedback e suporte:</strong> usar seu e-mail para responder solicitações que você nos enviar</li>
         <li><strong>Segurança:</strong> validar identidade, prevenir abuso e proteger as contas</li>
       </ul>
 
       <h3>3.2 Base Legal (LGPD/GDPR)</h3>
       <ul>
-        <li><strong>Execução de contrato:</strong> processar seus dados é necessário para fornecer o serviço que você solicitou (participar de clubes de leitura)</li>
+        <li><strong>Execução de contrato:</strong> processar seus dados é necessário para fornecer o serviço que você solicitou (participar de clubes de leitura e concluir compras/assinaturas)</li>
         <li><strong>Consentimento:</strong> ao criar sua conta e aceitar esta política, você consente com o processamento descrito aqui</li>
-        <li><strong>Interesses legítimos:</strong> manter a segurança, prevenir fraudes e melhorar o aplicativo</li>
+        <li><strong>Interesses legítimos:</strong> manter a segurança, prevenir fraudes, exibir anúncios para manter o app gratuito e melhorar o aplicativo</li>
       </ul>
     </section>
 
@@ -222,9 +249,9 @@
       <h2>4. Compartilhamento de Informações</h2>
 
       <p>
-        <strong>Não vendemos seus dados.</strong> O Clube do Livro <strong>não exibe anúncios</strong> e não compartilha
-        suas informações com redes de publicidade. Compartilhamos dados apenas com os serviços estritamente necessários
-        para o app funcionar:
+        <strong>Não vendemos seus dados pessoais.</strong> Compartilhamos informações apenas com os serviços necessários
+        para operar o app, exibir anúncios e processar compras. Para exibir anúncios, identificadores de publicidade são
+        compartilhados com o Google AdMob — você pode limitar isso (ver seção 8):
       </p>
 
       <h3>4.1 Serviços de Terceiros</h3>
@@ -243,11 +270,26 @@
         <li><strong>Política:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
       </ul>
 
-      <h4>Google Books</h4>
+      <h4>Google AdMob (Anúncios)</h4>
       <ul>
-        <li><strong>Dados compartilhados:</strong> o termo de busca digitado (enviado pelo nosso servidor)</li>
-        <li><strong>Finalidade:</strong> retornar dados de livros (título, autor, capa, sinopse)</li>
+        <li><strong>Dados compartilhados:</strong> ID de publicidade, informações do dispositivo, dados de interação com anúncios, geolocalização aproximada</li>
+        <li><strong>Finalidade:</strong> exibir anúncios e medir sua eficácia</li>
         <li><strong>Política:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+        <li><strong>Personalização de anúncios:</strong> você pode desativar anúncios personalizados nas configurações do seu dispositivo (ver seção 8)</li>
+      </ul>
+
+      <h4>RevenueCat (Assinaturas e Compras)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> identificador de usuário do app, histórico e recibos de compra, plataforma e informações básicas do dispositivo</li>
+        <li><strong>Finalidade:</strong> gerenciar, validar e restaurar assinaturas e compras dentro do app</li>
+        <li><strong>Política:</strong> <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">https://www.revenuecat.com/privacy</a></li>
+      </ul>
+
+      <h4>Google Play e Apple (Pagamentos)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> o pagamento é processado pela loja; recebemos apenas a confirmação e o status da compra — <strong>não os dados do seu cartão</strong></li>
+        <li><strong>Finalidade:</strong> processar compras dentro do app e assinaturas</li>
+        <li><strong>Políticas:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a> · <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a></li>
       </ul>
 
       <h3>4.2 Backend Próprio (Appwrite)</h3>
@@ -265,14 +307,14 @@
         <li>Seu <strong>nome, @ e foto</strong> são públicos quando você participa de clubes e publica conteúdo</li>
         <li>O conteúdo de um clube (mural, reuniões, enquetes) é visível aos <strong>membros daquele clube</strong></li>
         <li>Clubes <strong>públicos</strong> aparecem na descoberta; clubes <strong>privados/por convite</strong> só são acessíveis por link ou aprovação</li>
-        <li>Sua <strong>estante e seus clubes</strong> podem ficar privados pelo botão de privacidade do perfil (ver seção 8)</li>
+        <li>Sua <strong>estante e seus clubes</strong> podem ficar privados pelo botão de privacidade do perfil (ver seção 10)</li>
         <li>Seus <strong>votos em enquetes são secretos</strong></li>
       </ul>
 
       <h3>4.4 Transferência Internacional de Dados</h3>
       <p>Alguns serviços podem processar dados em servidores fora do Brasil:</p>
       <ul>
-        <li>Estados Unidos (Google — Login, Firebase, Google Books)</li>
+        <li>Estados Unidos (Google — Login, Firebase, AdMob, Google Books; RevenueCat; Apple)</li>
       </ul>
       <p>
         Essas transferências contam com salvaguardas adequadas, incluindo conformidade com o GDPR pelos provedores.
@@ -294,6 +336,7 @@
       <ul>
         <li><strong>Conta e conteúdo:</strong> armazenados no nosso backend próprio (Appwrite), com a senha protegida por hash</li>
         <li><strong>Fotos (avatar e capa):</strong> armazenadas no nosso storage, comprimidas no envio</li>
+        <li><strong>Compras e assinaturas:</strong> o status é gerenciado pelo RevenueCat e pelas lojas (Google Play / Apple)</li>
         <li><strong>No dispositivo:</strong> sua sessão de login e preferências básicas ficam localmente para manter você conectado</li>
       </ul>
 
@@ -325,9 +368,19 @@
             <td>Storage PWL Apps</td>
           </tr>
           <tr>
+            <td>Dados de compra/assinatura</td>
+            <td>Conforme a política do RevenueCat e das lojas</td>
+            <td>RevenueCat / Google Play / Apple</td>
+          </tr>
+          <tr>
             <td>Token de notificação</td>
             <td>Enquanto você mantiver as notificações ativas</td>
             <td>Backend PWL Apps / Google FCM</td>
+          </tr>
+          <tr>
+            <td>Dados do AdMob</td>
+            <td>Conforme a política do Google</td>
+            <td>Servidores Google</td>
           </tr>
           <tr>
             <td>Logs de servidor</td>
@@ -347,7 +400,7 @@
         <li><strong>Retificação:</strong> corrigir dados imprecisos — boa parte você edita direto no perfil do app</li>
         <li><strong>Exclusão:</strong> excluir seu conteúdo no app ou solicitar a exclusão da sua conta e dados ("direito ao esquecimento")</li>
         <li><strong>Portabilidade:</strong> receber seus dados em formato estruturado e legível por máquina</li>
-        <li><strong>Oposição:</strong> opor-se a determinado processamento de dados</li>
+        <li><strong>Oposição:</strong> opor-se a determinado processamento de dados, incluindo anúncios personalizados</li>
         <li><strong>Revogação de consentimento:</strong> retirar seu consentimento a qualquer momento</li>
         <li><strong>Confirmação de tratamento:</strong> confirmar se seus dados estão sendo processados</li>
       </ul>
@@ -359,6 +412,7 @@
         <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong>
       </p>
       <p>Responderemos sua solicitação em até <strong>15 dias úteis</strong> (conforme LGPD).</p>
+      <p>Para excluir sua conta, veja também a página dedicada de <a href="/delete-account/bookclub-app/">Exclusão de Conta e Dados</a>.</p>
     </section>
 
     <section class="card" id="push-notifications">
@@ -374,24 +428,74 @@
       </ul>
     </section>
 
-    <section class="card" id="content-visibility">
-      <h2>8. Conteúdo do Usuário e Privacidade entre Membros</h2>
+    <section class="card" id="ads">
+      <h2>8. Anúncios e Identificadores de Publicidade</h2>
+      <p>
+        O Clube do Livro é gratuito e exibe anúncios fornecidos pelo <strong>Google AdMob</strong>. Para isso, o AdMob
+        pode usar cookies, identificadores e tecnologias similares.
+      </p>
 
-      <h3>8.1 O que é Público</h3>
+      <h3>8.1 Finalidades</h3>
+      <ul>
+        <li>Exibir anúncios (personalizados ou não)</li>
+        <li>Medir a eficácia dos anúncios</li>
+        <li>Detectar e prevenir fraudes</li>
+      </ul>
+
+      <h3>8.2 Identificadores de Publicidade</h3>
+      <ul>
+        <li><strong>Android:</strong> Google Advertising ID (GAID)</li>
+        <li><strong>iOS:</strong> Identifier for Advertisers (IDFA)</li>
+      </ul>
+      <p>Esses identificadores podem ser redefinidos nas configurações de privacidade do seu dispositivo.</p>
+
+      <h3>8.3 Como Desativar Anúncios Personalizados</h3>
+      <p><strong>Android:</strong></p>
+      <ol>
+        <li>Configurações &gt; Google &gt; Anúncios</li>
+        <li>Ative "Desativar personalização de anúncios"</li>
+      </ol>
+      <p><strong>iOS:</strong></p>
+      <ol>
+        <li>Configurações &gt; Privacidade e Segurança &gt; Rastreamento</li>
+        <li>Desative o rastreamento de apps (App Tracking Transparency)</li>
+      </ol>
+      <p>Desativar a personalização não remove os anúncios — apenas os torna menos baseados nos seus interesses.</p>
+    </section>
+
+    <section class="card" id="payments">
+      <h2>9. Pagamentos e Assinaturas</h2>
+      <p>
+        O Clube do Livro pode oferecer compras dentro do app e assinaturas opcionais. Essas transações são processadas
+        pelas lojas oficiais — <strong>Google Play</strong> (Android) e <strong>Apple App Store</strong> (iOS) — e gerenciadas
+        pelo <strong>RevenueCat</strong>.
+      </p>
+      <ul>
+        <li><strong>Não recebemos dados de pagamento:</strong> número de cartão e dados bancários são tratados apenas pela loja; nós recebemos somente a confirmação e o status da compra</li>
+        <li><strong>RevenueCat:</strong> valida e mantém o estado das suas assinaturas, vinculadas a um identificador da sua conta no app</li>
+        <li><strong>Gerenciar ou cancelar:</strong> você gerencia e cancela assinaturas diretamente nas configurações da sua conta Google Play ou Apple ID</li>
+        <li><strong>Reembolsos:</strong> seguem as políticas da respectiva loja</li>
+      </ul>
+    </section>
+
+    <section class="card" id="content-visibility">
+      <h2>10. Conteúdo do Usuário e Privacidade entre Membros</h2>
+
+      <h3>10.1 O que é Público</h3>
       <ul>
         <li>Seu nome de exibição, @ e foto de perfil</li>
         <li>As avaliações (estrelas) que você dá aos livros</li>
         <li>Clubes públicos e seu conteúdo, para os respectivos membros</li>
       </ul>
 
-      <h3>8.2 O que Você Controla</h3>
+      <h3>10.2 O que Você Controla</h3>
       <ul>
         <li><strong>Perfil privado:</strong> um botão único deixa sua <strong>estante</strong> e seus <strong>clubes</strong> ocultos para outros usuários (tudo ou nada). Seu nome, @, bio e foto continuam visíveis.</li>
         <li><strong>Privacidade do clube:</strong> administradores definem se um clube é público (aparece na descoberta) ou por convite/privado.</li>
         <li><strong>Votos secretos:</strong> ninguém vê em quem você votou nas enquetes — apenas a contagem total é exibida.</li>
       </ul>
 
-      <h3>8.3 Conteúdo de Outros Membros</h3>
+      <h3>10.3 Conteúdo de Outros Membros</h3>
       <p>
         Ao sair ou ser removido de um clube, você perde o acesso ao conteúdo daquele clube, mas comentários e votos que
         você já deixou podem permanecer no histórico do clube. Se desejar a remoção desse conteúdo, entre em contato.
@@ -399,7 +503,7 @@
     </section>
 
     <section class="card" id="external-links">
-      <h2>9. Links Externos</h2>
+      <h2>11. Links Externos</h2>
       <p>
         O aplicativo pode abrir links externos — por exemplo, o link de uma videochamada de reunião ou o endereço de um
         encontro presencial no mapa. Não somos responsáveis pelas práticas de privacidade desses sites e serviços.
@@ -408,7 +512,7 @@
     </section>
 
     <section class="card" id="changes">
-      <h2>10. Alterações nesta Política</h2>
+      <h2>12. Alterações nesta Política</h2>
       <p>Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre mudanças significativas:</p>
       <ul>
         <li>Publicando a nova política nesta página</li>
@@ -419,9 +523,9 @@
     </section>
 
     <section class="card" id="security">
-      <h2>11. Segurança de Dados</h2>
+      <h2>13. Segurança de Dados</h2>
 
-      <h3>11.1 Medidas Técnicas</h3>
+      <h3>13.1 Medidas Técnicas</h3>
       <ul>
         <li><strong>Criptografia em trânsito:</strong> HTTPS/TLS para todas as comunicações</li>
         <li><strong>Senhas protegidas:</strong> armazenadas com hash, nunca em texto puro</li>
@@ -430,7 +534,7 @@
         <li><strong>Operações sensíveis no servidor:</strong> ações que envolvem membros e permissões são validadas no backend, não apenas no app</li>
       </ul>
 
-      <h3>11.2 Limitações</h3>
+      <h3>13.2 Limitações</h3>
       <p>
         Nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.
         Embora nos esforcemos para proteger seus dados, não podemos garantir segurança absoluta.
@@ -438,26 +542,26 @@
     </section>
 
     <section class="card" id="children">
-      <h2>12. Dados de Menores de Idade</h2>
+      <h2>14. Dados de Menores de Idade</h2>
       <p><strong>Este aplicativo não é direcionado a crianças menores de 13 anos.</strong></p>
       <p>
         Não coletamos intencionalmente informações pessoais de menores de 13 anos. Se você é pai/mãe ou responsável e acredita
         que seu filho forneceu dados pessoais, entre em contato conosco em
         <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong> para que possamos tomar as medidas apropriadas.
       </p>
-      <p><strong>Usuários entre 13-18 anos:</strong> Recomendamos que menores de 18 anos obtenham permissão dos pais ou responsáveis antes de usar o aplicativo.</p>
+      <p><strong>Usuários entre 13-18 anos:</strong> Recomendamos que menores de 18 anos obtenham permissão dos pais ou responsáveis antes de usar o aplicativo ou realizar compras.</p>
     </section>
 
     <section class="card" id="jurisdiction">
-      <h2>13. Jurisdição e Lei Aplicável</h2>
+      <h2>15. Jurisdição e Lei Aplicável</h2>
 
-      <h3>13.1 Usuários no Brasil</h3>
+      <h3>15.1 Usuários no Brasil</h3>
       <p>Esta política é regida pela Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018).</p>
 
-      <h3>13.2 Usuários na União Europeia</h3>
+      <h3>15.2 Usuários na União Europeia</h3>
       <p>Para usuários na UE, esta política também está em conformidade com o Regulamento Geral de Proteção de Dados (GDPR).</p>
 
-      <h3>13.3 Reclamações</h3>
+      <h3>15.3 Reclamações</h3>
       <p>Você tem o direito de registrar uma reclamação junto à:</p>
       <ul>
         <li><strong>Brasil:</strong> Autoridade Nacional de Proteção de Dados (ANPD) - <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">https://www.gov.br/anpd</a></li>
@@ -466,7 +570,7 @@
     </section>
 
     <section class="card" id="contact">
-      <h2>14. Contato</h2>
+      <h2>16. Contato</h2>
       <p>Se você tiver dúvidas, preocupações ou solicitações relacionadas a esta Política de Privacidade ou ao tratamento de seus dados pessoais, entre em contato:</p>
       <p>
         <strong>Email:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a><br/>
@@ -477,12 +581,13 @@
     </section>
 
     <section class="card" id="tldr">
-      <h2>15. Resumo Rápido (TL;DR)</h2>
+      <h2>17. Resumo Rápido (TL;DR)</h2>
 
       <p><strong>O que coletamos:</strong></p>
       <ul>
         <li>Conta (e-mail, senha com hash) ou login Google (e-mail, nome, foto)</li>
         <li>Perfil (nome, @, bio, foto) e o conteúdo que você cria (clubes, reuniões, mural, enquetes, estante, avaliações)</li>
+        <li>ID de publicidade (AdMob) e status de compras/assinaturas (RevenueCat)</li>
         <li>Token de notificação e logs técnicos do servidor</li>
       </ul>
 
@@ -491,12 +596,13 @@
         <li>Fazer o app de clubes de leitura funcionar</li>
         <li>Compartilhar conteúdo entre os membros certos</li>
         <li>Buscar livros (Google Books) e enviar notificações (Firebase)</li>
+        <li>Exibir anúncios (AdMob) e processar compras/assinaturas (RevenueCat + Google/Apple)</li>
       </ul>
 
       <p><strong>O que NÃO fazemos:</strong></p>
       <ul>
-        <li>Não exibimos anúncios</li>
-        <li>Não vendemos seus dados</li>
+        <li>Não vendemos seus dados pessoais</li>
+        <li>Não recebemos os dados do seu cartão (o pagamento é processado pela Google e pela Apple)</li>
         <li>Não revelamos em quem você votou (votos secretos)</li>
       </ul>
 
@@ -504,7 +610,7 @@
       <ul>
         <li>Editar e excluir seu conteúdo no app</li>
         <li>Solicitar exclusão da conta e dos dados por e-mail</li>
-        <li>Deixar estante e clubes privados, e desativar notificações</li>
+        <li>Deixar estante e clubes privados, desativar notificações e limitar anúncios personalizados</li>
       </ul>
 
       <p><strong>Contato:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></p>
@@ -526,6 +632,10 @@
         Bookclub is a social app: you create an account, set up your profile, join reading clubs, schedule meetings, chat
         on the wall, run polls and keep your book shelf. Because it is an app with accounts and content shared between
         members, we handle your data carefully and transparently.
+      </p>
+      <p>
+        The application is <strong>free and shows ads</strong>, and offers <strong>optional purchases</strong>
+        (such as subscriptions) to unlock additional features.
       </p>
       <p>
         By using Bookclub, you agree to the collection and use of information in accordance with this policy. We recommend
@@ -584,10 +694,31 @@
         <li>Notification token via Firebase Cloud Messaging</li>
       </ul>
 
+      <h4>Google AdMob (Ads)</h4>
+      <ul>
+        <li>Device advertising ID (GAID on Android, IDFA on iOS)</li>
+        <li>IP address</li>
+        <li>Ad interaction data</li>
+        <li>Device information</li>
+        <li>Approximate geolocation data</li>
+      </ul>
+
       <h4>Google Books</h4>
       <p>
         When you search for a book, your query is sent to the Google Books API (through our server) to return titles,
         authors, covers and synopses. The request to Google is made by our backend, not directly by your device.
+      </p>
+
+      <h3>2.6 Purchase and Subscription Information</h3>
+      <p>When you make an in-app purchase or subscribe to a plan, we collect and process:</p>
+      <ul>
+        <li><strong>Purchase/subscription status and history:</strong> which products you bought, whether the subscription is active or expired — managed by RevenueCat</li>
+        <li><strong>Purchase identifier:</strong> an app user identifier is sent to RevenueCat to link the purchase to your account</li>
+        <li><strong>Store receipts:</strong> receipt/transaction data provided by Google Play or Apple to validate the purchase</li>
+      </ul>
+      <p>
+        The <strong>payment itself</strong> (card, banking data) is processed directly by <strong>Google Play</strong> (Android)
+        or <strong>Apple</strong> (iOS). <strong>We do not receive or store your card data.</strong>
       </p>
     </section>
 
@@ -601,15 +732,17 @@
         <li><strong>Share content between members:</strong> allow members of the same club to see that club's wall, meetings and polls</li>
         <li><strong>Search books:</strong> return search results via Google Books and build the catalog</li>
         <li><strong>Send notifications:</strong> notify you about relevant activity in your clubs (push notifications)</li>
+        <li><strong>Show ads:</strong> Google AdMob shows ads to keep the application free</li>
+        <li><strong>Process purchases and subscriptions:</strong> validate, restore and manage purchases via RevenueCat and the stores (Google Play / Apple)</li>
         <li><strong>Respond to feedback and support:</strong> use your email to reply to requests you send us</li>
         <li><strong>Security:</strong> validate identity, prevent abuse and protect accounts</li>
       </ul>
 
       <h3>3.2 Legal Basis (LGPD/GDPR)</h3>
       <ul>
-        <li><strong>Contract execution:</strong> processing your data is necessary to provide the service you requested (joining reading clubs)</li>
+        <li><strong>Contract execution:</strong> processing your data is necessary to provide the service you requested (joining reading clubs and completing purchases/subscriptions)</li>
         <li><strong>Consent:</strong> by creating your account and accepting this policy, you consent to the processing described here</li>
-        <li><strong>Legitimate interests:</strong> maintaining security, preventing fraud and improving the application</li>
+        <li><strong>Legitimate interests:</strong> maintaining security, preventing fraud, showing ads to keep the app free and improving the application</li>
       </ul>
     </section>
 
@@ -617,8 +750,9 @@
       <h2>4. Information Sharing</h2>
 
       <p>
-        <strong>We do not sell your data.</strong> Bookclub <strong>does not display ads</strong> and does not share your
-        information with advertising networks. We share data only with the services strictly necessary to run the app:
+        <strong>We do not sell your personal data.</strong> We share information only with the services needed to operate
+        the app, show ads and process purchases. To show ads, advertising identifiers are shared with Google AdMob — you
+        can limit this (see section 8):
       </p>
 
       <h3>4.1 Third-Party Services</h3>
@@ -637,11 +771,26 @@
         <li><strong>Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
       </ul>
 
-      <h4>Google Books</h4>
+      <h4>Google AdMob (Ads)</h4>
       <ul>
-        <li><strong>Data shared:</strong> the search term you type (sent by our server)</li>
-        <li><strong>Purpose:</strong> return book data (title, author, cover, synopsis)</li>
+        <li><strong>Data shared:</strong> advertising ID, device information, ad interaction data, approximate geolocation</li>
+        <li><strong>Purpose:</strong> show ads and measure their effectiveness</li>
         <li><strong>Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+        <li><strong>Ad personalization:</strong> you can disable personalized ads in your device settings (see section 8)</li>
+      </ul>
+
+      <h4>RevenueCat (Subscriptions and Purchases)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> app user identifier, purchase history and receipts, platform and basic device information</li>
+        <li><strong>Purpose:</strong> manage, validate and restore in-app subscriptions and purchases</li>
+        <li><strong>Policy:</strong> <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">https://www.revenuecat.com/privacy</a></li>
+      </ul>
+
+      <h4>Google Play and Apple (Payments)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> the payment is processed by the store; we only receive the purchase confirmation and status — <strong>not your card data</strong></li>
+        <li><strong>Purpose:</strong> process in-app purchases and subscriptions</li>
+        <li><strong>Policies:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a> · <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a></li>
       </ul>
 
       <h3>4.2 Our Own Backend (Appwrite)</h3>
@@ -659,14 +808,14 @@
         <li>Your <strong>name, @ and picture</strong> are public when you join clubs and post content</li>
         <li>A club's content (wall, meetings, polls) is visible to the <strong>members of that club</strong></li>
         <li><strong>Public</strong> clubs appear in discovery; <strong>private/invite-only</strong> clubs are only accessible by link or approval</li>
-        <li>Your <strong>shelf and clubs</strong> can be made private via the profile privacy toggle (see section 8)</li>
+        <li>Your <strong>shelf and clubs</strong> can be made private via the profile privacy toggle (see section 10)</li>
         <li>Your <strong>poll votes are secret</strong></li>
       </ul>
 
       <h3>4.4 International Data Transfer</h3>
       <p>Some services may process data on servers outside Brazil:</p>
       <ul>
-        <li>United States (Google — Login, Firebase, Google Books)</li>
+        <li>United States (Google — Login, Firebase, AdMob, Google Books; RevenueCat; Apple)</li>
       </ul>
       <p>
         These transfers rely on adequate safeguards, including GDPR compliance by the providers.
@@ -688,6 +837,7 @@
       <ul>
         <li><strong>Account and content:</strong> stored on our own backend (Appwrite), with the password protected by hashing</li>
         <li><strong>Photos (avatar and cover):</strong> stored in our storage, compressed on upload</li>
+        <li><strong>Purchases and subscriptions:</strong> status is managed by RevenueCat and the stores (Google Play / Apple)</li>
         <li><strong>On the device:</strong> your login session and basic preferences are kept locally to keep you signed in</li>
       </ul>
 
@@ -718,9 +868,19 @@
             <td>PWL Apps storage</td>
           </tr>
           <tr>
+            <td>Purchase/subscription data</td>
+            <td>According to RevenueCat and store policies</td>
+            <td>RevenueCat / Google Play / Apple</td>
+          </tr>
+          <tr>
             <td>Notification token</td>
             <td>While you keep notifications enabled</td>
             <td>PWL Apps backend / Google FCM</td>
+          </tr>
+          <tr>
+            <td>AdMob data</td>
+            <td>According to Google's policy</td>
+            <td>Google servers</td>
           </tr>
           <tr>
             <td>Server logs</td>
@@ -740,7 +900,7 @@
         <li><strong>Rectification:</strong> correct inaccurate data — much of it you edit directly in the app profile</li>
         <li><strong>Deletion:</strong> delete your content in the app or request deletion of your account and data ("right to be forgotten")</li>
         <li><strong>Portability:</strong> receive your data in a structured, machine-readable format</li>
-        <li><strong>Opposition:</strong> object to certain data processing</li>
+        <li><strong>Opposition:</strong> object to certain data processing, including personalized ads</li>
         <li><strong>Consent revocation:</strong> withdraw your consent at any time</li>
         <li><strong>Processing confirmation:</strong> confirm whether your data is being processed</li>
       </ul>
@@ -752,6 +912,7 @@
         <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong>
       </p>
       <p>We will respond to your request within <strong>15 business days</strong> (as per LGPD).</p>
+      <p>To delete your account, see also our dedicated <a href="/delete-account/bookclub-app/">Account &amp; Data Deletion</a> page.</p>
     </section>
 
     <section class="card" id="push-notifications-en">
@@ -767,24 +928,74 @@
       </ul>
     </section>
 
-    <section class="card" id="content-visibility-en">
-      <h2>8. User Content and Privacy Between Members</h2>
+    <section class="card" id="ads-en">
+      <h2>8. Ads and Advertising Identifiers</h2>
+      <p>
+        Bookclub is free and shows ads provided by <strong>Google AdMob</strong>. For this, AdMob may use cookies,
+        identifiers and similar technologies.
+      </p>
 
-      <h3>8.1 What is Public</h3>
+      <h3>8.1 Purposes</h3>
+      <ul>
+        <li>Show ads (personalized or not)</li>
+        <li>Measure ad effectiveness</li>
+        <li>Detect and prevent fraud</li>
+      </ul>
+
+      <h3>8.2 Advertising Identifiers</h3>
+      <ul>
+        <li><strong>Android:</strong> Google Advertising ID (GAID)</li>
+        <li><strong>iOS:</strong> Identifier for Advertisers (IDFA)</li>
+      </ul>
+      <p>These identifiers can be reset in your device's privacy settings.</p>
+
+      <h3>8.3 How to Disable Personalized Ads</h3>
+      <p><strong>Android:</strong></p>
+      <ol>
+        <li>Settings &gt; Google &gt; Ads</li>
+        <li>Enable "Opt out of ads personalization"</li>
+      </ol>
+      <p><strong>iOS:</strong></p>
+      <ol>
+        <li>Settings &gt; Privacy &amp; Security &gt; Tracking</li>
+        <li>Turn off app tracking (App Tracking Transparency)</li>
+      </ol>
+      <p>Disabling personalization does not remove ads — it only makes them less based on your interests.</p>
+    </section>
+
+    <section class="card" id="payments-en">
+      <h2>9. Payments and Subscriptions</h2>
+      <p>
+        Bookclub may offer in-app purchases and optional subscriptions. These transactions are processed by the official
+        stores — <strong>Google Play</strong> (Android) and <strong>Apple App Store</strong> (iOS) — and managed by
+        <strong>RevenueCat</strong>.
+      </p>
+      <ul>
+        <li><strong>We do not receive payment data:</strong> card number and banking data are handled only by the store; we only receive the purchase confirmation and status</li>
+        <li><strong>RevenueCat:</strong> validates and keeps the state of your subscriptions, linked to an identifier of your app account</li>
+        <li><strong>Manage or cancel:</strong> you manage and cancel subscriptions directly in your Google Play account or Apple ID settings</li>
+        <li><strong>Refunds:</strong> follow the respective store's policies</li>
+      </ul>
+    </section>
+
+    <section class="card" id="content-visibility-en">
+      <h2>10. User Content and Privacy Between Members</h2>
+
+      <h3>10.1 What is Public</h3>
       <ul>
         <li>Your display name, @ and profile picture</li>
         <li>The ratings (stars) you give to books</li>
         <li>Public clubs and their content, for the respective members</li>
       </ul>
 
-      <h3>8.2 What You Control</h3>
+      <h3>10.2 What You Control</h3>
       <ul>
         <li><strong>Private profile:</strong> a single toggle hides your <strong>shelf</strong> and your <strong>clubs</strong> from other users (all or nothing). Your name, @, bio and picture remain visible.</li>
         <li><strong>Club privacy:</strong> admins decide whether a club is public (appears in discovery) or invite-only/private.</li>
         <li><strong>Secret votes:</strong> nobody sees who you voted for in polls — only the total count is shown.</li>
       </ul>
 
-      <h3>8.3 Other Members' Content</h3>
+      <h3>10.3 Other Members' Content</h3>
       <p>
         When you leave or are removed from a club, you lose access to that club's content, but comments and votes you have
         already left may remain in the club's history. If you want that content removed, please contact us.
@@ -792,7 +1003,7 @@
     </section>
 
     <section class="card" id="external-links-en">
-      <h2>9. External Links</h2>
+      <h2>11. External Links</h2>
       <p>
         The application may open external links — for example, a meeting's video call link or an in-person meeting address
         on the map. We are not responsible for the privacy practices of those sites and services. We recommend that you
@@ -801,7 +1012,7 @@
     </section>
 
     <section class="card" id="changes-en">
-      <h2>10. Changes to This Policy</h2>
+      <h2>12. Changes to This Policy</h2>
       <p>We may update this Privacy Policy periodically. We will notify you of significant changes by:</p>
       <ul>
         <li>Publishing the new policy on this page</li>
@@ -812,9 +1023,9 @@
     </section>
 
     <section class="card" id="security-en">
-      <h2>11. Data Security</h2>
+      <h2>13. Data Security</h2>
 
-      <h3>11.1 Technical Measures</h3>
+      <h3>13.1 Technical Measures</h3>
       <ul>
         <li><strong>Encryption in transit:</strong> HTTPS/TLS for all communications</li>
         <li><strong>Protected passwords:</strong> stored hashed, never in plain text</li>
@@ -823,7 +1034,7 @@
         <li><strong>Sensitive operations on the server:</strong> actions involving members and permissions are validated on the backend, not only in the app</li>
       </ul>
 
-      <h3>11.2 Limitations</h3>
+      <h3>13.2 Limitations</h3>
       <p>
         No method of transmission over the Internet or electronic storage is 100% secure. Although we strive to protect
         your data, we cannot guarantee absolute security.
@@ -831,26 +1042,26 @@
     </section>
 
     <section class="card" id="children-en">
-      <h2>12. Minor's Data</h2>
+      <h2>14. Minor's Data</h2>
       <p><strong>This application is not directed at children under 13 years of age.</strong></p>
       <p>
         We do not intentionally collect personal information from children under 13. If you are a parent or guardian and believe
         your child has provided personal data, please contact us at
         <strong><a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></strong> so we can take appropriate action.
       </p>
-      <p><strong>Users between 13-18 years:</strong> We recommend that minors under 18 obtain permission from parents or guardians before using the application.</p>
+      <p><strong>Users between 13-18 years:</strong> We recommend that minors under 18 obtain permission from parents or guardians before using the application or making purchases.</p>
     </section>
 
     <section class="card" id="jurisdiction-en">
-      <h2>13. Jurisdiction and Applicable Law</h2>
+      <h2>15. Jurisdiction and Applicable Law</h2>
 
-      <h3>13.1 Users in Brazil</h3>
+      <h3>15.1 Users in Brazil</h3>
       <p>This policy is governed by the General Data Protection Law (LGPD - Law 13,709/2018).</p>
 
-      <h3>13.2 Users in the European Union</h3>
+      <h3>15.2 Users in the European Union</h3>
       <p>For EU users, this policy also complies with the General Data Protection Regulation (GDPR).</p>
 
-      <h3>13.3 Complaints</h3>
+      <h3>15.3 Complaints</h3>
       <p>You have the right to file a complaint with:</p>
       <ul>
         <li><strong>Brazil:</strong> National Data Protection Authority (ANPD) - <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">https://www.gov.br/anpd</a></li>
@@ -859,7 +1070,7 @@
     </section>
 
     <section class="card" id="contact-en">
-      <h2>14. Contact</h2>
+      <h2>16. Contact</h2>
       <p>If you have questions, concerns or requests related to this Privacy Policy or the processing of your personal data, please contact:</p>
       <p>
         <strong>Email:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a><br/>
@@ -870,12 +1081,13 @@
     </section>
 
     <section class="card" id="tldr-en">
-      <h2>15. Quick Summary (TL;DR)</h2>
+      <h2>17. Quick Summary (TL;DR)</h2>
 
       <p><strong>What we collect:</strong></p>
       <ul>
         <li>Account (email, hashed password) or Google Sign-In (email, name, picture)</li>
         <li>Profile (name, @, bio, picture) and the content you create (clubs, meetings, wall, polls, shelf, ratings)</li>
+        <li>Advertising ID (AdMob) and purchase/subscription status (RevenueCat)</li>
         <li>Notification token and technical server logs</li>
       </ul>
 
@@ -884,12 +1096,13 @@
         <li>Make the reading clubs app work</li>
         <li>Share content between the right members</li>
         <li>Search books (Google Books) and send notifications (Firebase)</li>
+        <li>Show ads (AdMob) and process purchases/subscriptions (RevenueCat + Google/Apple)</li>
       </ul>
 
       <p><strong>What we DON'T do:</strong></p>
       <ul>
-        <li>We don't display ads</li>
-        <li>We don't sell your data</li>
+        <li>We don't sell your personal data</li>
+        <li>We don't receive your card data (payment is processed by Google and Apple)</li>
         <li>We don't reveal who you voted for (secret votes)</li>
       </ul>
 
@@ -897,7 +1110,7 @@
       <ul>
         <li>Edit and delete your content in the app</li>
         <li>Request account and data deletion by email</li>
-        <li>Make your shelf and clubs private, and disable notifications</li>
+        <li>Make your shelf and clubs private, disable notifications and limit personalized ads</li>
       </ul>
 
       <p><strong>Contact:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></p>

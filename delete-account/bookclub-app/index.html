@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exclusão de Conta e Dados - Clube do Livro</title>
+  <meta name="description" content="Como solicitar a exclusão da sua conta e dos seus dados no Clube do Livro (PWL Apps)." />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
+      --border:#1f2937; --accent:#a78bfa; --link:#93c5fd;
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    header{
+      padding:40px 16px 12px; border-bottom:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(167,139,250,.12), rgba(0,0,0,0));
+    }
+    .wrap{max-width:960px; margin:0 auto; padding:0 16px}
+    h1{margin:0 0 8px; font-size:28px}
+    .meta{color:var(--muted); margin:0}
+    main{padding:24px 0 56px}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:20px; margin:16px 0;
+    }
+    h2{margin:0 0 10px; font-size:20px}
+    h3{margin:18px 0 8px; font-size:16px; color:var(--text)}
+    p, li{color:var(--text)}
+    ul, ol{padding-left:20px; margin:8px 0}
+    li{margin:4px 0}
+    a{color:var(--link)}
+    code{background:rgba(255,255,255,.06); padding:.15em .35em; border-radius:6px}
+    .back-link{
+      display:inline-block; margin-bottom:16px; color:var(--accent); text-decoration:none;
+      font-size:14px;
+    }
+    .back-link:hover{text-decoration:underline}
+    footer{
+      border-top:1px solid var(--border); padding:20px 0; color:var(--muted); text-align:center;
+      font-size:0.85rem;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7f7fb; --card:#ffffff; --text:#111827; --muted:#4b5563;
+        --border:#e5e7eb; --accent:#7c3aed; --link:#2563eb;
+      }
+      code{background:#f3f4f6}
+      header{background:linear-gradient(180deg, rgba(124,58,237,.10), rgba(255,255,255,0))}
+    }
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 6px 16px;
+      cursor: pointer;
+      z-index: 100;
+      user-select: none;
+    }
+    .lang-toggle .flag {
+      font-size: 1.2rem;
+      opacity: 0.4;
+      transition: opacity 0.2s;
+      line-height: 1;
+    }
+    .lang-toggle .flag.active {
+      opacity: 1;
+    }
+    .lang-toggle .switch {
+      width: 36px;
+      height: 20px;
+      background: var(--border);
+      border-radius: 10px;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .lang-toggle .switch::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s;
+    }
+    .lang-toggle.en .switch::after {
+      transform: translateX(16px);
+    }
+    .content-en { display: none; }
+  </style>
+</head>
+<body>
+  <div id="deletion-toggle"></div>
+  <div id="deletion-header"></div>
+
+  <div class="content-pt">
+  <main class="wrap">
+
+    <section class="card" id="intro">
+      <p>
+        Esta página explica como solicitar a exclusão da sua conta e dos seus dados no aplicativo
+        <strong>Clube do Livro</strong>, desenvolvido pela <strong>PWL Apps</strong>.
+      </p>
+    </section>
+
+    <section class="card" id="how-to-request">
+      <h2>Como solicitar a exclusão</h2>
+      <p>Você pode excluir sua conta diretamente no app:</p>
+      <ol>
+        <li>Abra o app e vá na aba <strong>Você</strong>.</li>
+        <li>Toque em <strong>Conta</strong>.</li>
+        <li>Selecione <strong>Excluir conta</strong>.</li>
+        <li>Confirme a solicitação.</li>
+      </ol>
+      <p>
+        Como alternativa, envie um e-mail para
+        <a href="mailto:contact.pwlapps@gmail.com?subject=Exclus%C3%A3o%20de%20dados">contact.pwlapps@gmail.com</a>
+        com o assunto <strong>"Exclusão de dados"</strong>, a partir do endereço de e-mail cadastrado na sua conta.
+        Responderemos em até <strong>15 dias úteis</strong>.
+      </p>
+    </section>
+
+    <section class="card" id="data-deleted">
+      <h2>Quais dados são excluídos</h2>
+      <p>Ao confirmar a exclusão, removemos permanentemente os dados associados à sua conta, incluindo:</p>
+      <ul>
+        <li>Seu nome, nome de usuário (@) e e-mail</li>
+        <li>Foto de perfil e bio</li>
+        <li>Clubes que você criou e seus conteúdos</li>
+        <li>Mensagens e comentários no mural</li>
+        <li>Avaliações de livros e sua estante</li>
+        <li>Votos em enquetes</li>
+        <li>Demais conteúdos associados à sua conta</li>
+      </ul>
+      <p>A exclusão é <strong>permanente e irreversível</strong>.</p>
+    </section>
+
+    <section class="card" id="data-retained">
+      <h2>Quais dados são retidos e por quanto tempo</h2>
+      <p>
+        Podemos reter por até <strong>90 dias</strong> registros necessários para cumprir obrigações legais, fiscais ou
+        de prevenção a fraude. Após esse período, esses dados são apagados ou anonimizados.
+      </p>
+      <p>
+        Registros de <strong>transações de assinatura</strong> são mantidos pela Google Play, pela Apple e pelo RevenueCat
+        conforme as políticas desses serviços — nós não armazenamos os dados do seu cartão.
+      </p>
+      <p>
+        <strong>Assinaturas ativas:</strong> excluir a conta não cancela automaticamente uma assinatura. Cancele sua
+        assinatura nas configurações da <strong>Google Play</strong> (Android) ou do <strong>Apple ID</strong> (iOS).
+      </p>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>Contato</h2>
+      <p>Dúvidas sobre exclusão de dados? Fale com a gente:</p>
+      <p><strong>Email:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></p>
+      <p>Veja também nossa <a href="/privacy/bookclub-app/">Política de Privacidade</a>.</p>
+    </section>
+
+  </main>
+  </div>
+
+  <div class="content-en">
+  <main class="wrap">
+
+    <section class="card" id="intro-en">
+      <p>
+        This page explains how to request the deletion of your account and data in the
+        <strong>Bookclub</strong> application, developed by <strong>PWL Apps</strong>.
+      </p>
+    </section>
+
+    <section class="card" id="how-to-request-en">
+      <h2>How to request deletion</h2>
+      <p>You can delete your account directly in the app:</p>
+      <ol>
+        <li>Open the app and go to the <strong>You</strong> tab.</li>
+        <li>Tap <strong>Account</strong>.</li>
+        <li>Select <strong>Delete account</strong>.</li>
+        <li>Confirm the request.</li>
+      </ol>
+      <p>
+        Alternatively, send an email to
+        <a href="mailto:contact.pwlapps@gmail.com?subject=Data%20deletion">contact.pwlapps@gmail.com</a>
+        with the subject <strong>"Data deletion"</strong>, from the email address registered to your account.
+        We will respond within <strong>15 business days</strong>.
+      </p>
+    </section>
+
+    <section class="card" id="data-deleted-en">
+      <h2>What data is deleted</h2>
+      <p>When you confirm deletion, we permanently remove the data associated with your account, including:</p>
+      <ul>
+        <li>Your name, username (@) and email</li>
+        <li>Profile picture and bio</li>
+        <li>Clubs you created and their content</li>
+        <li>Messages and wall comments</li>
+        <li>Book ratings and your shelf</li>
+        <li>Poll votes</li>
+        <li>Other content associated with your account</li>
+      </ul>
+      <p>Deletion is <strong>permanent and irreversible</strong>.</p>
+    </section>
+
+    <section class="card" id="data-retained-en">
+      <h2>What data is retained and for how long</h2>
+      <p>
+        We may retain for up to <strong>90 days</strong> records needed to comply with legal, tax or fraud-prevention
+        obligations. After that period, those records are deleted or anonymized.
+      </p>
+      <p>
+        <strong>Subscription transaction</strong> records are kept by Google Play, Apple and RevenueCat according to their
+        own policies — we do not store your card data.
+      </p>
+      <p>
+        <strong>Active subscriptions:</strong> deleting your account does not automatically cancel a subscription. Cancel
+        your subscription in your <strong>Google Play</strong> (Android) or <strong>Apple ID</strong> (iOS) settings.
+      </p>
+    </section>
+
+    <section class="card" id="contact-en">
+      <h2>Contact</h2>
+      <p>Questions about data deletion? Get in touch:</p>
+      <p><strong>Email:</strong> <a href="mailto:contact.pwlapps@gmail.com">contact.pwlapps@gmail.com</a></p>
+      <p>See also our <a href="/privacy/bookclub-app/">Privacy Policy</a>.</p>
+    </section>
+
+  </main>
+  </div>
+
+  <footer>
+    <div class="wrap" id="deletion-footer"></div>
+  </footer>
+
+  <script src="../../shared.js"></script>
+  <script>initDeletionPage('bookclub-app');</script>
+</body>
+</html>
