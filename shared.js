@@ -1,6 +1,6 @@
 var PWL = {
     developer: 'PWL Apps',
-    email: 'contact.pwlapps@gmail.com',
+    email: 'contact@pwlapps.com',
     copyright: '2026',
     subtitle: { pt: 'Nossos aplicativos', en: 'Our apps' },
     privacyLink: { pt: 'Política de Privacidade', en: 'Privacy Policy' },
