@@ -49,6 +49,19 @@ var PWL_APPS = {
         icon: 'assets/icons/financa_pro.png',
         privacyPath: '/privacy/invest-calc/',
         lastUpdated: { pt: '7 de abril de 2026', en: 'April 7, 2026' }
+    },
+    'smart-prompter': {
+        version: '1.0',
+        appName: { pt: 'Smart Prompter', en: 'Smart Prompter' },
+        appFullName: { pt: 'Smart Prompter - Teleprompter com IA', en: 'Smart Prompter - AI Teleprompter' },
+        description: {
+            pt: 'Teleprompter inteligente com rolagem por voz offline, gravação de vídeo com o roteiro sobreposto e estúdio de texto com IA para criar e ajustar roteiros.',
+            en: 'Smart teleprompter with offline voice-tracked scrolling, video recording with the script overlaid, and an AI text studio to create and adjust scripts.'
+        },
+        storeUrl: 'https://play.google.com/store/apps/details?id=com.pwlapps.teleprompter',
+        icon: 'assets/icons/smart-prompter.png',
+        privacyPath: '/privacy/smart-prompter/',
+        lastUpdated: { pt: '18 de junho de 2026', en: 'June 18, 2026' }
     }
 };
 
