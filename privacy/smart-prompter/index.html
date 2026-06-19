@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de Privacidade - Smart Prompter</title>
+  <meta name="description" content="Política de Privacidade do Smart Prompter - Teleprompter com IA (PWL Apps)." />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
+      --border:#1f2937; --accent:#a78bfa; --link:#93c5fd;
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    header{
+      padding:40px 16px 12px; border-bottom:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(167,139,250,.12), rgba(0,0,0,0));
+    }
+    .wrap{max-width:960px; margin:0 auto; padding:0 16px}
+    h1{margin:0 0 8px; font-size:28px}
+    .meta{color:var(--muted); margin:0}
+    main{padding:24px 0 56px}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:20px; margin:16px 0;
+    }
+    h2{margin:0 0 10px; font-size:20px}
+    h3{margin:18px 0 8px; font-size:16px; color:var(--text)}
+    h4{margin:14px 0 6px; font-size:14px; color:var(--text)}
+    p, li{color:var(--text)}
+    ul, ol{padding-left:20px; margin:8px 0}
+    li{margin:4px 0}
+    a{color:var(--link)}
+    code{background:rgba(255,255,255,.06); padding:.15em .35em; border-radius:6px}
+    hr{border:none; border-top:1px solid var(--border); margin:18px 0}
+    table{
+      width:100%; border-collapse:collapse; margin-top:10px; overflow:hidden; border-radius:12px;
+      border:1px solid var(--border);
+    }
+    th, td{padding:12px 10px; border-bottom:1px solid var(--border); vertical-align:top; text-align:left}
+    th{background:rgba(255,255,255,.04)}
+    tr:last-child td{border-bottom:none}
+    .badge{
+      display:inline-block; padding:2px 10px; border:1px solid rgba(167,139,250,.35);
+      border-radius:999px; color:#ddd6fe; font-size:12px; margin-left:8px;
+    }
+    .back-link{
+      display:inline-block; margin-bottom:16px; color:var(--accent); text-decoration:none;
+      font-size:14px;
+    }
+    .back-link:hover{text-decoration:underline}
+    footer{
+      border-top:1px solid var(--border); padding:20px 0; color:var(--muted); text-align:center;
+      font-size:0.85rem;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7f7fb; --card:#ffffff; --text:#111827; --muted:#4b5563;
+        --border:#e5e7eb; --accent:#7c3aed; --link:#2563eb;
+      }
+      code{background:#f3f4f6}
+      header{background:linear-gradient(180deg, rgba(124,58,237,.10), rgba(255,255,255,0))}
+    }
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 6px 16px;
+      cursor: pointer;
+      z-index: 100;
+      user-select: none;
+    }
+    .lang-toggle .flag {
+      font-size: 1.2rem;
+      opacity: 0.4;
+      transition: opacity 0.2s;
+      line-height: 1;
+    }
+    .lang-toggle .flag.active {
+      opacity: 1;
+    }
+    .lang-toggle .switch {
+      width: 36px;
+      height: 20px;
+      background: var(--border);
+      border-radius: 10px;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .lang-toggle .switch::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s;
+    }
+    .lang-toggle.en .switch::after {
+      transform: translateX(16px);
+    }
+    .content-en { display: none; }
+  </style>
+</head>
+<body>
+  <div id="privacy-toggle"></div>
+  <div id="privacy-header"></div>
+
+  <div class="content-pt">
+  <main class="wrap">
+
+    <section class="card" id="introduction">
+      <h2>1. Introdução</h2>
+      <p>
+        Esta Política de Privacidade descreve como o Smart Prompter ("nós", "nosso" ou "aplicativo") coleta, usa,
+        armazena e protege suas informações quando você utiliza nosso aplicativo de teleprompter.
+      </p>
+      <p>
+        O Smart Prompter é um teleprompter que exibe seus roteiros com rolagem em velocidade fixa ou inteligente
+        (rolagem automática guiada por voz), grava vídeo com o roteiro sobreposto à câmera, pode (no Android)
+        flutuar o roteiro sobre outros aplicativos e inclui um estúdio de texto com IA para criar e ajustar roteiros.
+        O app <strong>não exige cadastro nem login</strong>.
+      </p>
+      <p>
+        Ao usar o Smart Prompter, você concorda com a coleta e uso de informações de acordo com esta política.
+        Recomendamos que você leia esta política com atenção antes de usar o aplicativo.
+      </p>
+      <p>
+        <strong>Idade mínima:</strong> Este aplicativo é destinado a usuários com 13 anos ou mais.
+        Não coletamos intencionalmente informações de crianças menores de 13 anos.
+      </p>
+    </section>
+
+    <section class="card" id="information-we-collect">
+      <h2>2. Informações que Coletamos</h2>
+
+      <h3>2.1 Conteúdo Criado por Você</h3>
+      <ul>
+        <li><strong>Roteiros:</strong> O texto dos roteiros que você escreve, importa ou gera fica armazenado localmente no seu dispositivo.</li>
+        <li><strong>Tópicos e textos enviados à IA:</strong> Quando você usa o Estúdio de texto para <em>gerar</em> ou <em>ajustar</em> um roteiro, o tópico ou o texto que você digitou é enviado ao nosso servidor para processamento por inteligência artificial (veja a Seção 4).</li>
+        <li><strong>Vídeos gravados:</strong> Vídeos que você grava com o teleprompter são salvos diretamente na galeria do seu dispositivo. Não enviamos esses vídeos para nenhum servidor.</li>
+      </ul>
+
+      <h3>2.2 Microfone e Reconhecimento de Voz</h3>
+      <ul>
+        <li><strong>Rolagem inteligente (modo "smart"):</strong> No Android, o áudio do microfone é processado <strong>inteiramente no seu dispositivo</strong> por um reconhecedor de voz offline (Vosk) apenas para acompanhar a leitura e mover o roteiro. <strong>Esse áudio não é gravado nem enviado para nenhum servidor.</strong></li>
+        <li><strong>iOS:</strong> No iOS, a rolagem inteligente usa o serviço de reconhecimento de fala do próprio sistema operacional (Apple). Dependendo das configurações do seu dispositivo, a Apple pode processar trechos de áudio em seus servidores para converter fala em texto, conforme a política de privacidade da Apple.</li>
+        <li><strong>Gravação de vídeo:</strong> Ao gravar um vídeo, o microfone também é usado para capturar a trilha de áudio do vídeo, que é salva localmente junto com o vídeo na galeria.</li>
+      </ul>
+
+      <h3>2.3 Informações Armazenadas Localmente</h3>
+      <ul>
+        <li><strong>Configurações:</strong> Fonte, cores, velocidade, transparência, idioma e demais preferências, salvas via <code>SharedPreferences</code>.</li>
+        <li><strong>Modelos de voz baixados:</strong> Pacotes de reconhecimento de voz por idioma armazenados no dispositivo.</li>
+        <li><strong>Dados técnicos:</strong> Informações básicas do dispositivo, versão do sistema operacional e versão do aplicativo.</li>
+      </ul>
+
+      <h3>2.4 Informações Coletadas Automaticamente por Terceiros</h3>
+
+      <h4>Google AdMob (Anúncios em Banner)</h4>
+      <ul>
+        <li>ID de publicidade do dispositivo (IDFA/AAID)</li>
+        <li>Endereço IP</li>
+        <li>Dados de interação com anúncios</li>
+        <li>Informações do dispositivo e navegador</li>
+        <li>Dados de geolocalização aproximada</li>
+      </ul>
+
+      <h4>Firebase Analytics (Google)</h4>
+      <ul>
+        <li>Identificador de instância do aplicativo (App Instance ID)</li>
+        <li>Eventos de uso (telas abertas, recursos utilizados)</li>
+        <li>Informações do dispositivo, modelo, sistema operacional e idioma</li>
+        <li>Dados aproximados de região derivados do endereço IP</li>
+      </ul>
+    </section>
+
+    <section class="card" id="how-we-use">
+      <h2>3. Como Usamos Suas Informações</h2>
+
+      <h3>3.1 Finalidades Principais</h3>
+      <ul>
+        <li><strong>Gerar e ajustar roteiros com IA:</strong> O tópico ou texto que você fornece é enviado ao nosso servidor e, dele, à OpenAI para produzir ou reescrever o roteiro solicitado.</li>
+        <li><strong>Rolagem por voz:</strong> O áudio do microfone é usado, no dispositivo, para acompanhar sua leitura e mover o roteiro automaticamente.</li>
+        <li><strong>Gravar vídeo:</strong> A câmera e o microfone são usados para gravar vídeos com o roteiro sobreposto, salvos na sua galeria.</li>
+        <li><strong>Reconhecimento de idioma:</strong> Baixar e usar modelos de voz no idioma escolhido.</li>
+        <li><strong>Exibir anúncios:</strong> O Google AdMob exibe anúncios em banner para monetizar a versão gratuita do app.</li>
+        <li><strong>Gerenciar assinaturas:</strong> Processar e validar a assinatura que remove anúncios e/ou desbloqueia recursos.</li>
+        <li><strong>Melhorar o aplicativo:</strong> Analisar dados de uso agregados e anônimos (Firebase Analytics) para aprimorar a experiência.</li>
+      </ul>
+
+      <h3>3.2 Base Legal (LGPD/GDPR)</h3>
+      <ul>
+        <li><strong>Consentimento:</strong> Ao usar o aplicativo e aceitar esta política, você consente com o processamento dos seus dados.</li>
+        <li><strong>Execução de contrato:</strong> Processar seus dados é necessário para fornecer os recursos solicitados (gerar roteiros, assinaturas).</li>
+        <li><strong>Interesses legítimos:</strong> Exibir anúncios para manter o serviço gratuito, prevenir fraudes e melhorar nossos serviços.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="sharing">
+      <h2>4. Compartilhamento de Informações</h2>
+
+      <h3>4.1 Serviços de Terceiros</h3>
+
+      <h4>OpenAI (Geração de Roteiros com IA)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> O tópico ou texto que você envia ao gerar ou ajustar um roteiro.</li>
+        <li><strong>Finalidade:</strong> Produzir ou reescrever roteiros usando inteligência artificial.</li>
+        <li><strong>Importante:</strong> O envio passa pelo nosso servidor (Appwrite); a chave da OpenAI fica apenas no servidor e nunca no app.</li>
+        <li><strong>Política:</strong> <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">https://openai.com/policies/privacy-policy</a></li>
+      </ul>
+
+      <h4>Appwrite (Servidor do Desenvolvedor)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> O conteúdo da sua solicitação de IA e um token de sessão anônima (não vinculado à sua identidade).</li>
+        <li><strong>Finalidade:</strong> Intermediar com segurança as chamadas de IA. Você usa uma <strong>sessão anônima</strong> — não criamos conta nem coletamos nome ou email.</li>
+        <li><strong>Infraestrutura:</strong> Servidor próprio da PWL Apps em <code>app.pwlapps.com</code>. O conteúdo enviado à IA é processado de forma efêmera e não é mantido em um banco de dados nosso.</li>
+      </ul>
+
+      <h4>Google AdMob (Anúncios em Banner)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> ID de publicidade, informações do dispositivo, dados de interação.</li>
+        <li><strong>Finalidade:</strong> Exibir anúncios em banner e medir sua eficácia.</li>
+        <li><strong>Política:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+        <li><strong>Personalização de anúncios:</strong> Você pode desativar anúncios personalizados nas configurações do seu dispositivo, ou removê-los assinando.</li>
+      </ul>
+
+      <h4>Firebase Analytics (Google)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> Identificador de instância do app, eventos de uso, dados do dispositivo.</li>
+        <li><strong>Finalidade:</strong> Entender, de forma agregada, como o aplicativo é usado para melhorá-lo.</li>
+        <li><strong>Política:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <h4>RevenueCat (Gerenciamento de Assinaturas)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> Identificador anônimo de usuário, identificadores de compra e dados da transação fornecidos pela loja de aplicativos.</li>
+        <li><strong>Finalidade:</strong> Validar e gerenciar o status da sua assinatura entre dispositivos.</li>
+        <li><strong>Política:</strong> <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">https://www.revenuecat.com/privacy/</a></li>
+      </ul>
+
+      <h4>Google Play / Apple App Store (Pagamento)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> O pagamento da assinatura é processado inteiramente pela loja. <strong>Nunca temos acesso aos seus dados de cartão ou pagamento.</strong></li>
+        <li><strong>Finalidade:</strong> Processar a compra e a renovação da assinatura.</li>
+      </ul>
+
+      <h4>Alpha Cephei / Vosk (Download de Modelos de Voz)</h4>
+      <ul>
+        <li><strong>Dados compartilhados:</strong> Endereço IP (via requisição HTTP) ao baixar a lista e os pacotes de modelos de idioma.</li>
+        <li><strong>Finalidade:</strong> Obter os modelos de reconhecimento de voz offline. O modelo de português já vem embutido no app; demais idiomas são baixados apenas quando você escolhe nas configurações.</li>
+        <li><strong>Site:</strong> <a href="https://alphacephei.com/vosk/" target="_blank" rel="noopener noreferrer">https://alphacephei.com/vosk/</a></li>
+      </ul>
+
+      <h3>4.2 Transferência Internacional de Dados</h3>
+      <p>Seus dados podem ser transferidos e processados em servidores localizados fora do Brasil, incluindo:</p>
+      <ul>
+        <li>Estados Unidos (OpenAI, Google, RevenueCat)</li>
+        <li>Outros países (servidores de distribuição dos modelos de voz)</li>
+      </ul>
+      <p>
+        Garantimos que essas transferências são realizadas com salvaguardas adequadas, incluindo cláusulas
+        contratuais padrão e conformidade com o GDPR.
+      </p>
+
+      <h3>4.3 Situações Legais</h3>
+      <p>Podemos divulgar suas informações se:</p>
+      <ul>
+        <li>Exigido por lei ou processo legal</li>
+        <li>Para proteger nossos direitos, propriedade ou segurança</li>
+        <li>Para prevenir fraudes ou atividades ilegais</li>
+      </ul>
+    </section>
+
+    <section class="card" id="storage-security">
+      <h2>5. Armazenamento e Segurança de Dados</h2>
+
+      <h3>5.1 Armazenamento Local</h3>
+      <ul>
+        <li><strong>Roteiros, configurações e modelos de voz:</strong> Armazenados localmente no seu dispositivo (<code>SharedPreferences</code> e arquivos), protegidos pelo sistema operacional.</li>
+        <li><strong>Vídeos gravados:</strong> Salvos na galeria do seu dispositivo.</li>
+        <li><strong>Controle:</strong> Você pode excluir roteiros, modelos e vídeos a qualquer momento dentro do app, na galeria ou desinstalando o aplicativo.</li>
+      </ul>
+
+      <h3>5.2 Sessão Anônima e Servidor</h3>
+      <ul>
+        <li><strong>Sem conta pessoal:</strong> O app usa uma sessão anônima do Appwrite apenas para autorizar as chamadas de IA. Não há nome, email ou senha.</li>
+        <li><strong>Processamento efêmero:</strong> O texto enviado à IA é processado para gerar a resposta e não é mantido em um banco de dados nosso.</li>
+        <li><strong>Segurança:</strong> Dados transmitidos via HTTPS/TLS.</li>
+      </ul>
+
+      <h3>5.3 Retenção de Dados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de Dado</th>
+            <th>Período de Retenção</th>
+            <th>Localização</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Roteiros, configurações e modelos de voz</td>
+            <td>Até você excluir ou desinstalar o app</td>
+            <td>Dispositivo local</td>
+          </tr>
+          <tr>
+            <td>Vídeos gravados</td>
+            <td>Até você excluir</td>
+            <td>Galeria do dispositivo</td>
+          </tr>
+          <tr>
+            <td>Áudio da rolagem por voz</td>
+            <td>Não armazenado (processado em tempo real)</td>
+            <td>Dispositivo local</td>
+          </tr>
+          <tr>
+            <td>Texto/tópico enviado à IA</td>
+            <td>Efêmero no nosso servidor; OpenAI conforme sua política</td>
+            <td>Servidor PWL Apps / OpenAI</td>
+          </tr>
+          <tr>
+            <td>Dados do AdMob</td>
+            <td>Conforme política do Google</td>
+            <td>Servidores Google</td>
+          </tr>
+          <tr>
+            <td>Dados do Firebase Analytics</td>
+            <td>Conforme política do Google (padrão até 14 meses)</td>
+            <td>Servidores Google</td>
+          </tr>
+          <tr>
+            <td>Dados de assinatura (RevenueCat)</td>
+            <td>Conforme política da RevenueCat</td>
+            <td>Servidores RevenueCat</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="your-rights">
+      <h2>6. Seus Direitos (LGPD e GDPR)</h2>
+
+      <h3>6.1 Direitos Garantidos</h3>
+      <ul>
+        <li><strong>Acesso:</strong> Solicitar informações sobre quais dados são processados.</li>
+        <li><strong>Retificação:</strong> Corrigir dados imprecisos ou incompletos.</li>
+        <li><strong>Exclusão:</strong> Solicitar a exclusão dos seus dados ("direito ao esquecimento") ou excluí-los localmente desinstalando o app.</li>
+        <li><strong>Portabilidade:</strong> Receber seus dados em formato estruturado e legível por máquina.</li>
+        <li><strong>Oposição:</strong> Opor-se ao processamento de dados para anúncios personalizados e analytics.</li>
+        <li><strong>Revogação de consentimento:</strong> Retirar seu consentimento a qualquer momento.</li>
+      </ul>
+
+      <h3>6.2 Como Exercer Seus Direitos</h3>
+      <p>
+        Para exercer qualquer um desses direitos, envie um email para:
+        <strong><a href="mailto:contact@pwlapps.com">contact@pwlapps.com</a></strong>
+      </p>
+      <p>Responderemos sua solicitação em até <strong>15 dias úteis</strong> (conforme LGPD).</p>
+
+      <h3>6.3 Desativar Anúncios Personalizados</h3>
+      <p><strong>Android:</strong></p>
+      <ol>
+        <li>Configurações &gt; Google &gt; Anúncios</li>
+        <li>Ative "Desativar personalização de anúncios"</li>
+      </ol>
+      <p><strong>iOS:</strong></p>
+      <ol>
+        <li>Configurações &gt; Privacidade &gt; Publicidade</li>
+        <li>Ative "Limitar rastreamento de anúncios"</li>
+      </ol>
+    </section>
+
+    <section class="card" id="permissions">
+      <h2>7. Permissões do Aplicativo</h2>
+      <p>O Smart Prompter solicita as seguintes permissões, sempre com uma finalidade específica:</p>
+      <ul>
+        <li><strong>Microfone:</strong> Rolagem por voz (no dispositivo) e captura de áudio ao gravar vídeo.</li>
+        <li><strong>Câmera:</strong> Pré-visualização e gravação de vídeo com o roteiro sobreposto.</li>
+        <li><strong>Armazenamento / Fotos:</strong> Salvar os vídeos gravados na sua galeria.</li>
+        <li><strong>Sobreposição de tela (apenas Android):</strong> Flutuar o roteiro sobre outros aplicativos.</li>
+        <li><strong>Internet:</strong> Gerar/ajustar roteiros com IA, baixar modelos de voz, exibir anúncios e gerenciar assinaturas.</li>
+      </ul>
+      <p>Você pode revogar qualquer permissão a qualquer momento nas configurações do seu dispositivo.</p>
+    </section>
+
+    <section class="card" id="cookies-tracking">
+      <h2>8. Cookies e Identificadores</h2>
+
+      <h3>8.1 Tecnologias de Terceiros</h3>
+      <p>O Google AdMob e o Firebase podem usar cookies e tecnologias similares (web beacons, pixels) para:</p>
+      <ul>
+        <li>Exibir anúncios relevantes</li>
+        <li>Medir eficácia de anúncios e uso do app</li>
+        <li>Detectar fraudes</li>
+      </ul>
+
+      <h3>8.2 Identificadores de Dispositivo</h3>
+      <ul>
+        <li><strong>Android:</strong> Google Advertising ID (GAID)</li>
+        <li><strong>iOS:</strong> Identifier for Advertisers (IDFA)</li>
+      </ul>
+      <p>Esses identificadores podem ser redefinidos nas configurações de privacidade do seu dispositivo.</p>
+    </section>
+
+    <section class="card" id="external-links">
+      <h2>9. Links Externos</h2>
+      <p>
+        O aplicativo pode conter links para sites ou serviços de terceiros (como as políticas de privacidade da
+        Google, OpenAI ou RevenueCat). Não somos responsáveis pelas práticas de privacidade desses sites.
+        Recomendamos que você leia as políticas de privacidade de qualquer site que visitar.
+      </p>
+    </section>
+
+    <section class="card" id="changes">
+      <h2>10. Alterações nesta Política</h2>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre mudanças significativas:</p>
+      <ul>
+        <li>Publicando a nova política dentro do aplicativo</li>
+        <li>Atualizando a data "Última atualização" no topo deste documento</li>
+      </ul>
+      <p>O uso continuado do aplicativo após alterações constitui aceitação da política atualizada.</p>
+    </section>
+
+    <section class="card" id="security">
+      <h2>11. Segurança de Dados</h2>
+
+      <h3>11.1 Medidas Técnicas</h3>
+      <ul>
+        <li><strong>Criptografia em trânsito:</strong> HTTPS/TLS para todas as comunicações.</li>
+        <li><strong>Processamento no dispositivo:</strong> O reconhecimento de voz para a rolagem inteligente roda localmente (Android); o áudio não é transmitido.</li>
+        <li><strong>Chaves protegidas:</strong> A chave da IA fica apenas no servidor, nunca no aplicativo.</li>
+        <li><strong>Sem dados de pagamento:</strong> Pagamentos são tratados pelas lojas; não armazenamos dados financeiros.</li>
+      </ul>
+
+      <h3>11.2 Limitações</h3>
+      <p>
+        Nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.
+        Embora nos esforcemos para proteger seus dados, não podemos garantir segurança absoluta.
+      </p>
+    </section>
+
+    <section class="card" id="children">
+      <h2>12. Dados de Menores de Idade</h2>
+      <p><strong>Este aplicativo não é direcionado a crianças menores de 13 anos.</strong></p>
+      <p>
+        Não coletamos intencionalmente informações pessoais de menores de 13 anos. Se você é pai/mãe ou responsável e acredita
+        que seu filho forneceu dados pessoais, entre em contato em
+        <strong><a href="mailto:contact@pwlapps.com">contact@pwlapps.com</a></strong> para que possamos tomar as medidas apropriadas.
+      </p>
+      <p><strong>Usuários entre 13-18 anos:</strong> Recomendamos que menores de 18 anos obtenham permissão dos pais ou responsáveis antes de usar o aplicativo.</p>
+    </section>
+
+    <section class="card" id="jurisdiction">
+      <h2>13. Jurisdição e Lei Aplicável</h2>
+
+      <h3>13.1 Usuários no Brasil</h3>
+      <p>Esta política é regida pela Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018).</p>
+
+      <h3>13.2 Usuários na União Europeia</h3>
+      <p>Para usuários na UE, esta política também está em conformidade com o Regulamento Geral de Proteção de Dados (GDPR).</p>
+
+      <h3>13.3 Reclamações</h3>
+      <p>Você tem o direito de registrar uma reclamação junto à:</p>
+      <ul>
+        <li><strong>Brasil:</strong> Autoridade Nacional de Proteção de Dados (ANPD) - <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">https://www.gov.br/anpd</a></li>
+        <li><strong>UE:</strong> Autoridade de proteção de dados do seu país</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>14. Contato</h2>
+      <p>Se você tiver dúvidas, preocupações ou solicitações relacionadas a esta Política de Privacidade ou ao tratamento de seus dados pessoais, entre em contato:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact@pwlapps.com">contact@pwlapps.com</a><br/>
+        <strong>Desenvolvedor:</strong> PWL Apps<br/>
+        <strong>Aplicativo:</strong> Smart Prompter - Teleprompter com IA
+      </p>
+      <p>Responderemos suas solicitações em até 15 dias úteis.</p>
+    </section>
+
+    <section class="card" id="tldr">
+      <h2>15. Resumo Rápido (TL;DR)</h2>
+
+      <p><strong>O que fica no seu dispositivo:</strong></p>
+      <ul>
+        <li>Roteiros, configurações e modelos de voz</li>
+        <li>Vídeos gravados (na sua galeria)</li>
+        <li>Rolagem por voz processada localmente — o áudio não é enviado a ninguém (Android)</li>
+      </ul>
+
+      <p><strong>O que é compartilhado:</strong></p>
+      <ul>
+        <li>OpenAI (via nosso servidor) — só quando você gera/ajusta um roteiro com IA</li>
+        <li>Google AdMob (anúncios em banner) e Firebase Analytics (uso do app)</li>
+        <li>RevenueCat (gerenciar assinatura) — pagamento processado pela loja</li>
+        <li>Alpha Cephei/Vosk — ao baixar modelos de outros idiomas</li>
+      </ul>
+
+      <p><strong>O que NÃO fazemos:</strong></p>
+      <ul>
+        <li>Não exigimos cadastro nem login (sessão anônima)</li>
+        <li>Não enviamos seus vídeos para servidores</li>
+        <li>Não temos acesso aos seus dados de pagamento</li>
+      </ul>
+
+      <p><strong>Contato:</strong> <a href="mailto:contact@pwlapps.com">contact@pwlapps.com</a></p>
+    </section>
+
+  </main>
+  </div>
+
+  <div class="content-en">
+  <main class="wrap">
+
+    <section class="card" id="introduction-en">
+      <h2>1. Introduction</h2>
+      <p>
+        This Privacy Policy describes how Smart Prompter ("we", "our" or "application") collects, uses, stores and
+        protects your information when you use our teleprompter application.
+      </p>
+      <p>
+        Smart Prompter is a teleprompter that displays your scripts with fixed-speed or smart (voice-tracked)
+        scrolling, records video with the script overlaid on the camera, can (on Android) float the script over
+        other apps, and includes an AI text studio to create and adjust scripts. The app <strong>does not require
+        registration or login</strong>.
+      </p>
+      <p>
+        By using Smart Prompter, you agree to the collection and use of information in accordance with this policy.
+        We recommend that you read this policy carefully before using the application.
+      </p>
+      <p>
+        <strong>Minimum age:</strong> This application is intended for users aged 13 or older. We do not intentionally
+        collect information from children under 13.
+      </p>
+    </section>
+
+    <section class="card" id="information-we-collect-en">
+      <h2>2. Information We Collect</h2>
+
+      <h3>2.1 Content You Create</h3>
+      <ul>
+        <li><strong>Scripts:</strong> The text of the scripts you write, import or generate is stored locally on your device.</li>
+        <li><strong>Topics and text sent to the AI:</strong> When you use the text studio to <em>generate</em> or <em>adjust</em> a script, the topic or text you typed is sent to our server for processing by artificial intelligence (see Section 4).</li>
+        <li><strong>Recorded videos:</strong> Videos you record with the teleprompter are saved directly to your device's gallery. We do not upload these videos to any server.</li>
+      </ul>
+
+      <h3>2.2 Microphone and Voice Recognition</h3>
+      <ul>
+        <li><strong>Smart scrolling ("smart" mode):</strong> On Android, microphone audio is processed <strong>entirely on your device</strong> by an offline voice recognizer (Vosk) only to follow your reading and move the script. <strong>This audio is not recorded or sent to any server.</strong></li>
+        <li><strong>iOS:</strong> On iOS, smart scrolling uses the operating system's own speech recognition service (Apple). Depending on your device settings, Apple may process audio snippets on its servers to convert speech to text, according to Apple's privacy policy.</li>
+        <li><strong>Video recording:</strong> When recording a video, the microphone is also used to capture the video's audio track, which is saved locally together with the video in the gallery.</li>
+      </ul>
+
+      <h3>2.3 Locally Stored Information</h3>
+      <ul>
+        <li><strong>Settings:</strong> Font, colors, speed, transparency, language and other preferences, saved via <code>SharedPreferences</code>.</li>
+        <li><strong>Downloaded voice models:</strong> Per-language voice recognition packages stored on the device.</li>
+        <li><strong>Technical data:</strong> Basic device information, operating system version and app version.</li>
+      </ul>
+
+      <h3>2.4 Information Automatically Collected by Third Parties</h3>
+
+      <h4>Google AdMob (Banner Ads)</h4>
+      <ul>
+        <li>Device advertising ID (IDFA/AAID)</li>
+        <li>IP address</li>
+        <li>Ad interaction data</li>
+        <li>Device and browser information</li>
+        <li>Approximate geolocation data</li>
+      </ul>
+
+      <h4>Firebase Analytics (Google)</h4>
+      <ul>
+        <li>App Instance ID</li>
+        <li>Usage events (screens opened, features used)</li>
+        <li>Device information, model, operating system and language</li>
+        <li>Approximate region data derived from the IP address</li>
+      </ul>
+    </section>
+
+    <section class="card" id="how-we-use-en">
+      <h2>3. How We Use Your Information</h2>
+
+      <h3>3.1 Main Purposes</h3>
+      <ul>
+        <li><strong>Generate and adjust scripts with AI:</strong> The topic or text you provide is sent to our server and, from there, to OpenAI to produce or rewrite the requested script.</li>
+        <li><strong>Voice scrolling:</strong> Microphone audio is used, on the device, to follow your reading and move the script automatically.</li>
+        <li><strong>Record video:</strong> The camera and microphone are used to record videos with the script overlaid, saved to your gallery.</li>
+        <li><strong>Language recognition:</strong> Download and use voice models in the chosen language.</li>
+        <li><strong>Display ads:</strong> Google AdMob displays banner ads to monetize the free version of the app.</li>
+        <li><strong>Manage subscriptions:</strong> Process and validate the subscription that removes ads and/or unlocks features.</li>
+        <li><strong>Improve the application:</strong> Analyze aggregated and anonymous usage data (Firebase Analytics) to enhance the experience.</li>
+      </ul>
+
+      <h3>3.2 Legal Basis (LGPD/GDPR)</h3>
+      <ul>
+        <li><strong>Consent:</strong> By using the application and accepting this policy, you consent to the processing of your data.</li>
+        <li><strong>Contract execution:</strong> Processing your data is necessary to provide the requested features (generate scripts, subscriptions).</li>
+        <li><strong>Legitimate interests:</strong> Displaying ads to keep the service free, preventing fraud and improving our services.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="sharing-en">
+      <h2>4. Information Sharing</h2>
+
+      <h3>4.1 Third-Party Services</h3>
+
+      <h4>OpenAI (AI Script Generation)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> The topic or text you submit when generating or adjusting a script.</li>
+        <li><strong>Purpose:</strong> Produce or rewrite scripts using artificial intelligence.</li>
+        <li><strong>Important:</strong> The submission goes through our server (Appwrite); the OpenAI key stays only on the server and never in the app.</li>
+        <li><strong>Policy:</strong> <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">https://openai.com/policies/privacy-policy</a></li>
+      </ul>
+
+      <h4>Appwrite (Developer's Server)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> The content of your AI request and an anonymous session token (not linked to your identity).</li>
+        <li><strong>Purpose:</strong> Securely broker the AI calls. You use an <strong>anonymous session</strong> — we do not create an account or collect name or email.</li>
+        <li><strong>Infrastructure:</strong> PWL Apps' own server at <code>app.pwlapps.com</code>. The content sent to the AI is processed ephemerally and is not kept in a database of ours.</li>
+      </ul>
+
+      <h4>Google AdMob (Banner Ads)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> Advertising ID, device information, interaction data.</li>
+        <li><strong>Purpose:</strong> Display banner ads and measure their effectiveness.</li>
+        <li><strong>Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+        <li><strong>Ad personalization:</strong> You can disable personalized ads in your device settings, or remove them by subscribing.</li>
+      </ul>
+
+      <h4>Firebase Analytics (Google)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> App instance ID, usage events, device data.</li>
+        <li><strong>Purpose:</strong> Understand, in aggregate, how the app is used in order to improve it.</li>
+        <li><strong>Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <h4>RevenueCat (Subscription Management)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> Anonymous user identifier, purchase identifiers and transaction data provided by the app store.</li>
+        <li><strong>Purpose:</strong> Validate and manage your subscription status across devices.</li>
+        <li><strong>Policy:</strong> <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">https://www.revenuecat.com/privacy/</a></li>
+      </ul>
+
+      <h4>Google Play / Apple App Store (Payment)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> The subscription payment is processed entirely by the store. <strong>We never have access to your card or payment data.</strong></li>
+        <li><strong>Purpose:</strong> Process the purchase and renewal of the subscription.</li>
+      </ul>
+
+      <h4>Alpha Cephei / Vosk (Voice Model Downloads)</h4>
+      <ul>
+        <li><strong>Data shared:</strong> IP address (via HTTP request) when downloading the list and the language model packages.</li>
+        <li><strong>Purpose:</strong> Obtain the offline voice recognition models. The Portuguese model is bundled with the app; other languages are downloaded only when you choose them in settings.</li>
+        <li><strong>Site:</strong> <a href="https://alphacephei.com/vosk/" target="_blank" rel="noopener noreferrer">https://alphacephei.com/vosk/</a></li>
+      </ul>
+
+      <h3>4.2 International Data Transfer</h3>
+      <p>Your data may be transferred and processed on servers located outside Brazil, including:</p>
+      <ul>
+        <li>United States (OpenAI, Google, RevenueCat)</li>
+        <li>Other countries (voice model distribution servers)</li>
+      </ul>
+      <p>
+        We ensure these transfers are carried out with adequate safeguards, including standard contractual clauses and GDPR compliance.
+      </p>
+
+      <h3>4.3 Legal Situations</h3>
+      <p>We may disclose your information if:</p>
+      <ul>
+        <li>Required by law or legal process</li>
+        <li>To protect our rights, property or safety</li>
+        <li>To prevent fraud or illegal activities</li>
+      </ul>
+    </section>
+
+    <section class="card" id="storage-security-en">
+      <h2>5. Data Storage and Security</h2>
+
+      <h3>5.1 Local Storage</h3>
+      <ul>
+        <li><strong>Scripts, settings and voice models:</strong> Stored locally on your device (<code>SharedPreferences</code> and files), protected by the operating system.</li>
+        <li><strong>Recorded videos:</strong> Saved to your device's gallery.</li>
+        <li><strong>Control:</strong> You can delete scripts, models and videos at any time within the app, in the gallery, or by uninstalling the application.</li>
+      </ul>
+
+      <h3>5.2 Anonymous Session and Server</h3>
+      <ul>
+        <li><strong>No personal account:</strong> The app uses an anonymous Appwrite session only to authorize the AI calls. There is no name, email or password.</li>
+        <li><strong>Ephemeral processing:</strong> The text sent to the AI is processed to generate the response and is not kept in a database of ours.</li>
+        <li><strong>Security:</strong> Data transmitted via HTTPS/TLS.</li>
+      </ul>
+
+      <h3>5.3 Data Retention</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Retention Period</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Scripts, settings and voice models</td>
+            <td>Until you delete or uninstall the app</td>
+            <td>Local device</td>
+          </tr>
+          <tr>
+            <td>Recorded videos</td>
+            <td>Until you delete them</td>
+            <td>Device gallery</td>
+          </tr>
+          <tr>
+            <td>Voice scrolling audio</td>
+            <td>Not stored (processed in real time)</td>
+            <td>Local device</td>
+          </tr>
+          <tr>
+            <td>Text/topic sent to the AI</td>
+            <td>Ephemeral on our server; OpenAI per its policy</td>
+            <td>PWL Apps server / OpenAI</td>
+          </tr>
+          <tr>
+            <td>AdMob data</td>
+            <td>According to Google's policy</td>
+            <td>Google servers</td>
+          </tr>
+          <tr>
+            <td>Firebase Analytics data</td>
+            <td>According to Google's policy (default up to 14 months)</td>
+            <td>Google servers</td>
+          </tr>
+          <tr>
+            <td>Subscription data (RevenueCat)</td>
+            <td>According to RevenueCat's policy</td>
+            <td>RevenueCat servers</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="your-rights-en">
+      <h2>6. Your Rights (LGPD and GDPR)</h2>
+
+      <h3>6.1 Guaranteed Rights</h3>
+      <ul>
+        <li><strong>Access:</strong> Request information about which data is processed.</li>
+        <li><strong>Rectification:</strong> Correct inaccurate or incomplete data.</li>
+        <li><strong>Deletion:</strong> Request deletion of your data ("right to be forgotten") or delete it locally by uninstalling the app.</li>
+        <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+        <li><strong>Opposition:</strong> Object to data processing for personalized ads and analytics.</li>
+        <li><strong>Consent revocation:</strong> Withdraw your consent at any time.</li>
+      </ul>
+
+      <h3>6.2 How to Exercise Your Rights</h3>
+      <p>
+        To exercise any of these rights, send an email to:
+        <strong><a href="mailto:contact@pwlapps.com">contact@pwlapps.com</a></strong>
+      </p>
+      <p>We will respond to your request within <strong>15 business days</strong> (as per LGPD).</p>
+
+      <h3>6.3 Disable Personalized Ads</h3>
+      <p><strong>Android:</strong></p>
+      <ol>
+        <li>Settings &gt; Google &gt; Ads</li>
+        <li>Enable "Opt out of ads personalization"</li>
+      </ol>
+      <p><strong>iOS:</strong></p>
+      <ol>
+        <li>Settings &gt; Privacy &gt; Advertising</li>
+        <li>Enable "Limit Ad Tracking"</li>
+      </ol>
+    </section>
+
+    <section class="card" id="permissions-en">
+      <h2>7. App Permissions</h2>
+      <p>Smart Prompter requests the following permissions, always for a specific purpose:</p>
+      <ul>
+        <li><strong>Microphone:</strong> Voice scrolling (on the device) and audio capture when recording video.</li>
+        <li><strong>Camera:</strong> Preview and recording of video with the script overlaid.</li>
+        <li><strong>Storage / Photos:</strong> Save recorded videos to your gallery.</li>
+        <li><strong>Screen overlay (Android only):</strong> Float the script over other apps.</li>
+        <li><strong>Internet:</strong> Generate/adjust scripts with AI, download voice models, display ads and manage subscriptions.</li>
+      </ul>
+      <p>You can revoke any permission at any time in your device settings.</p>
+    </section>
+
+    <section class="card" id="cookies-tracking-en">
+      <h2>8. Cookies and Identifiers</h2>
+
+      <h3>8.1 Third-Party Technologies</h3>
+      <p>Google AdMob and Firebase may use cookies and similar technologies (web beacons, pixels) to:</p>
+      <ul>
+        <li>Display relevant ads</li>
+        <li>Measure ad effectiveness and app usage</li>
+        <li>Detect fraud</li>
+      </ul>
+
+      <h3>8.2 Device Identifiers</h3>
+      <ul>
+        <li><strong>Android:</strong> Google Advertising ID (GAID)</li>
+        <li><strong>iOS:</strong> Identifier for Advertisers (IDFA)</li>
+      </ul>
+      <p>These identifiers can be reset in your device's privacy settings.</p>
+    </section>
+
+    <section class="card" id="external-links-en">
+      <h2>9. External Links</h2>
+      <p>
+        The application may contain links to third-party websites or services (such as Google, OpenAI or RevenueCat
+        privacy policies). We are not responsible for the privacy practices of these sites. We recommend that you read
+        the privacy policies of any site you visit.
+      </p>
+    </section>
+
+    <section class="card" id="changes-en">
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy periodically. We will notify you of significant changes by:</p>
+      <ul>
+        <li>Publishing the new policy within the application</li>
+        <li>Updating the "Last updated" date at the top of this document</li>
+      </ul>
+      <p>Continued use of the application after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section class="card" id="security-en">
+      <h2>11. Data Security</h2>
+
+      <h3>11.1 Technical Measures</h3>
+      <ul>
+        <li><strong>Encryption in transit:</strong> HTTPS/TLS for all communications.</li>
+        <li><strong>On-device processing:</strong> Voice recognition for smart scrolling runs locally (Android); the audio is not transmitted.</li>
+        <li><strong>Protected keys:</strong> The AI key stays only on the server, never in the app.</li>
+        <li><strong>No payment data:</strong> Payments are handled by the stores; we do not store financial data.</li>
+      </ul>
+
+      <h3>11.2 Limitations</h3>
+      <p>
+        No method of transmission over the Internet or electronic storage is 100% secure. Although we strive to protect
+        your data, we cannot guarantee absolute security.
+      </p>
+    </section>
+
+    <section class="card" id="children-en">
+      <h2>12. Minor's Data</h2>
+      <p><strong>This application is not directed at children under 13 years of age.</strong></p>
+      <p>
+        We do not intentionally collect personal information from children under 13. If you are a parent or guardian and believe your child has provided personal data, please contact us at
+        <strong><a href="mailto:contact@pwlapps.com">contact@pwlapps.com</a></strong> so we can take appropriate action.
+      </p>
+      <p><strong>Users between 13-18 years:</strong> We recommend that minors under 18 obtain permission from parents or guardians before using the application.</p>
+    </section>
+
+    <section class="card" id="jurisdiction-en">
+      <h2>13. Jurisdiction and Applicable Law</h2>
+
+      <h3>13.1 Users in Brazil</h3>
+      <p>This policy is governed by the General Data Protection Law (LGPD - Law 13,709/2018).</p>
+
+      <h3>13.2 Users in the European Union</h3>
+      <p>For EU users, this policy also complies with the General Data Protection Regulation (GDPR).</p>
+
+      <h3>13.3 Complaints</h3>
+      <p>You have the right to file a complaint with:</p>
+      <ul>
+        <li><strong>Brazil:</strong> National Data Protection Authority (ANPD) - <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">https://www.gov.br/anpd</a></li>
+        <li><strong>EU:</strong> Data protection authority of your country</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact-en">
+      <h2>14. Contact</h2>
+      <p>If you have questions, concerns or requests related to this Privacy Policy or the processing of your personal data, please contact:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:contact@pwlapps.com">contact@pwlapps.com</a><br/>
+        <strong>Developer:</strong> PWL Apps<br/>
+        <strong>Application:</strong> Smart Prompter - AI Teleprompter
+      </p>
+      <p>We will respond to your requests within 15 business days.</p>
+    </section>
+
+    <section class="card" id="tldr-en">
+      <h2>15. Quick Summary (TL;DR)</h2>
+
+      <p><strong>What stays on your device:</strong></p>
+      <ul>
+        <li>Scripts, settings and voice models</li>
+        <li>Recorded videos (in your gallery)</li>
+        <li>Voice scrolling processed locally — the audio is not sent to anyone (Android)</li>
+      </ul>
+
+      <p><strong>What is shared:</strong></p>
+      <ul>
+        <li>OpenAI (via our server) — only when you generate/adjust a script with AI</li>
+        <li>Google AdMob (banner ads) and Firebase Analytics (app usage)</li>
+        <li>RevenueCat (manage subscription) — payment processed by the store</li>
+        <li>Alpha Cephei/Vosk — when downloading other-language models</li>
+      </ul>
+
+      <p><strong>What we DON'T do:</strong></p>
+      <ul>
+        <li>We don't require registration or login (anonymous session)</li>
+        <li>We don't upload your videos to servers</li>
+        <li>We don't have access to your payment data</li>
+      </ul>
+
+      <p><strong>Contact:</strong> <a href="mailto:contact@pwlapps.com">contact@pwlapps.com</a></p>
+    </section>
+
+  </main>
+  </div>
+
+  <footer>
+    <div class="wrap" id="privacy-footer"></div>
+  </footer>
+
+  <script src="../../shared.js"></script>
+  <script>initPrivacyPage('smart-prompter');</script>
+</body>
+</html>
