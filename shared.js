@@ -26,8 +26,8 @@ var PWL_APPS = {
     },
     'mystic-app': {
         version: '1.0',
-        appName: { pt: 'Mystic App', en: 'Mystic App' },
-        appFullName: { pt: 'Mystic - Leitura de Tarô com IA', en: 'Mystic - AI Tarot Reading' },
+        appName: { pt: 'Mystica', en: 'Mystic' },
+        appFullName: { pt: 'Mystica - Leitura de Tarô com IA', en: 'Mystic - AI Tarot Reading' },
         description: {
             pt: 'Tarot personalizado com tiragem de 3 cartas. Escolha um tema, faça sua pergunta e receba uma leitura interpretada com padrões, alertas e próximos passos.',
             en: 'Personalized tarot with a 3-card spread. Choose a theme, ask your question and receive an interpreted reading with patterns, alerts and next steps.'
@@ -123,15 +123,16 @@ function renderHomeCards() {
     Object.keys(PWL_APPS).forEach(function(key) {
         var app = PWL_APPS[key];
         html += '<div class="app-card">' +
-            '<a href="' + app.storeUrl + '" style="text-decoration: none; color: inherit;">' +
+            '<a href="' + app.storeUrl + '" class="card-link" style="text-decoration: none; color: inherit;">' +
             '<img src="' + app.icon + '" alt="' + app.appName.en + '" class="icon">' +
-            '<h2>' + app.appName.pt + '</h2>' +
+            '<h2 data-pt="' + app.appName.pt + '" data-en="' + app.appName.en + '">' + app.appName.pt + '</h2>' +
             '<p class="description" data-pt="' + app.description.pt + '" data-en="' + app.description.en + '">' + app.description.pt + '</p>' +
-            '<div class="store-badge">' +
-            '<img src="' + storeBadge + '" data-pt-alt="' + PWL.storeBadgeAlt.pt + '" data-en-alt="' + PWL.storeBadgeAlt.en + '" alt="' + PWL.storeBadgeAlt.pt + '">' +
-            '</div></a>' +
+            '</a>' +
             '<a href="' + app.privacyPath + '" class="privacy-link" data-pt="' + PWL.privacyLink.pt + '" data-en="' + PWL.privacyLink.en + '">' + PWL.privacyLink.pt + '</a>' +
             (app.deletionPath ? '<a href="' + app.deletionPath + '" class="privacy-link" data-pt="' + PWL.deletionLink.pt + '" data-en="' + PWL.deletionLink.en + '">' + PWL.deletionLink.pt + '</a>' : '') +
+            '<a href="' + app.storeUrl + '" class="store-badge">' +
+            '<img src="' + storeBadge + '" data-pt-alt="' + PWL.storeBadgeAlt.pt + '" data-en-alt="' + PWL.storeBadgeAlt.en + '" alt="' + PWL.storeBadgeAlt.pt + '">' +
+            '</a>' +
             '</div>';
     });
     return html;
